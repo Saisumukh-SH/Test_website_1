@@ -8,6 +8,24 @@
     </head>
 
     <body>
+      <form
+  name="booking"
+  method="POST"
+  data-netlify="true"
+  hidden
+>
+  <input type="hidden" name="form-name" value="booking" />
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="text" name="phone" />
+  <input type="text" name="serviceType" />
+  <input type="text" name="projectType" />
+  <input type="text" name="date" />
+  <input type="text" name="time" />
+  <input type="text" name="address" />
+  <textarea name="message"></textarea>
+</form>
+
       <div id="root"></div>
       <script type="module" src="/src/main.tsx"></script>
     </body>
