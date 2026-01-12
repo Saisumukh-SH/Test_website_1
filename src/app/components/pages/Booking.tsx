@@ -88,6 +88,9 @@ export function Booking() {
             data-netlify="true"
             className="space-y-6"
           >
+            <input type="hidden" name="form-name" value="booking" />
+            <input type="hidden" name="bot-field" />
+
             {/* Netlify required hidden input */}
             <input type="hidden" name="form-name" value="booking" />
 
