@@ -28,7 +28,7 @@ export function Booking() {
       body: encodedData,
     })
       .then(() => {
-  window.location.href = "/thank-you";
+        window.location.href = "/thank-you";
         setFormData({
           name: '',
           email: '',
