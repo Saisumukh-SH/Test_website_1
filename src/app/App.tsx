@@ -4,6 +4,8 @@ import { Home } from './components/pages/Home';
 import { Gallery } from './components/pages/Gallery';
 import { Booking } from './components/pages/Booking';
 import { Contact } from './components/pages/Contact';
+import { ThankYou } from "./components/pages/ThankYou";
+
 
 export default function App() {
   return (
@@ -15,6 +17,7 @@ export default function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
       </div>
     </Router>

@@ -28,7 +28,7 @@ export function Booking() {
       body: encodedData,
     })
       .then(() => {
-        alert('✅ Booking request submitted successfully!');
+  window.location.href = "/thank-you";
         setFormData({
           name: '',
           email: '',
