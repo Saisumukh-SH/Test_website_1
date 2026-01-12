@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉLITE Renovations - Luxury Home Transformation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        h1, h2, h3, .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .page { display: none; }
+        .page.active { display: block; }
+        .nav-link.active { color: #d4af37; }
+        
+        .gradient-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #f4e5c2 100%);
+        }
+        
+        .text-gold {
+            color: #d4af37;
+        }
+        
+        .border-gold {
+            border-color: #d4af37;
+        }
+        
+        .hover-gold:hover {
+            background-color: #d4af37;
+        }
+        
+        .bg-dark {
+            background-color: #1a1a1a;
+        }
+        
+        .animated-underline {
+            position: relative;
+        }
+        
+        .animated-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            background-color: #d4af37;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .animated-underline:hover::after {
+            width: 100%;
+        }
+        
+        .luxury-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-black/95 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <span class="text-3xl font-light serif tracking-widest text-gold">ÉLITE</span>
+                </div>
+                <div class="hidden md:flex space-x-12">
+                    <a href="#" class="nav-link active text-gray-300 hover:text-gold px-1 text-sm tracking-wider uppercase transition animated-underline" data-page="home">Home</a>
+                    <a href="#" class="nav-link text-gray-300 hover:text-gold px-1 text-sm tracking-wider uppercase transition animated-underline" data-page="gallery">Portfolio</a>
+                    <a href="#" class="nav-link text-gray-300 hover:text-gold px-1 text-sm tracking-wider uppercase transition animated-underline" data-page="booking">Consultation</a>
+                    <a href="#" class="nav-link text-gray-300 hover:text-gold px-1 text-sm tracking-wider uppercase transition animated-underline" data-page="contact">Contact</a>
+                </div>
+                <button class="md:hidden text-gold" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden pb-6" id="mobile-menu">
+                <a href="#" class="nav-link active block px-3 py-3 text-gray-300 hover:text-gold uppercase tracking-wider text-sm" data-page="home">Home</a>
+                <a href="#" class="nav-link block px-3 py-3 text-gray-300 hover:text-gold uppercase tracking-wider text-sm" data-page="gallery">Portfolio</a>
+                <a href="#" class="nav-link block px-3 py-3 text-gray-300 hover:text-gold uppercase tracking-wider text-sm" data-page="booking">Consultation</a>
+                <a href="#" class="nav-link block px-3 py-3 text-gray-300 hover:text-gold uppercase tracking-wider text-sm" data-page="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-900 to-black">
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold to-transparent" style="transform: skewY(-12deg);"></div>
+            </div>
+            <div class="relative max-w-6xl mx-auto px-6 lg:px-8 py-32 text-center">
+                <div class="mb-8">
+                    <div class="w-20 h-px bg-gold mx-auto mb-8"></div>
+                    <p class="text-gold text-sm tracking-widest uppercase mb-6">Bespoke Luxury Renovations</p>
+                </div>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-light serif mb-8 leading-tight">
+                    Artistry Meets<br/>
+                    <span class="text-gold">Excellence</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                    Where visionary design converges with impeccable craftsmanship to create timeless spaces of unparalleled sophistication.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <button class="bg-gold text-black px-10 py-4 text-sm tracking-widest uppercase font-medium hover:bg-yellow-600 transition-all duration-300" data-page="booking">Request Consultation</button>
+                    <button class="border-2 border-gold text-gold px-10 py-4 text-sm tracking-widest uppercase font-medium hover:bg-gold hover:text-black transition-all duration-300" data-page="gallery">View Portfolio</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="py-32 bg-gradient-to-b from-black to-gray-900">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center">
+                <div class="w-20 h-px bg-gold mx-auto mb-8"></div>
+                <h2 class="text-4xl md:text-6xl font-light serif mb-8 text-gold">Our Philosophy</h2>
+                <p class="text-xl text-gray-400 leading-relaxed font-light">
+                    At ÉLITE, we don't simply renovate spaces—we craft experiences. Each project is a masterpiece, 
+                    meticulously curated to reflect your unique vision while embodying timeless elegance and 
+                    uncompromising quality. Our artisans blend traditional craftsmanship with contemporary 
+                    innovation to create environments that transcend the ordinary.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-32 bg-black">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div class="w-20 h-px bg-gold mx-auto mb-8"></div>
+                    <h2 class="text-4xl md:text-6xl font-light serif mb-6">Curated Services</h2>
+                    <p class="text-xl text-gray-400 font-light">Bespoke solutions for discerning clientele</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="luxury-card p-10 hover:bg-opacity-10 transition-all duration-500 group">
+                        <div class="w-16 h-16 border-2 border-gold flex items-center justify-center mb-8 group-hover:bg-gold transition-all duration-300">
+                            <svg class="w-8 h-8 text-gold group-hover:text-black transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl serif mb-4 text-gold">Culinary Spaces</h3>
+                        <p class="text-gray-400 leading-relaxed font-light">Transform your kitchen into a chef's sanctuary with custom millwork, rare materials, and cutting-edge appliances seamlessly integrated into timeless design.</p>
+                    </div>
+                    <div class="luxury-card p-10 hover:bg-opacity-10 transition-all duration-500 group">
+                        <div class="w-16 h-16 border-2 border-gold flex items-center justify-center mb-8 group-hover:bg-gold transition-all duration-300">
+                            <svg class="w-8 h-8 text-gold group-hover:text-black transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl serif mb-4 text-gold">Private Sanctuaries</h3>
+                        <p class="text-gray-400 leading-relaxed font-light">Elevate your daily rituals with spa-inspired bathrooms featuring Italian marble, bespoke fixtures, and architectural lighting that creates an atmosphere of pure indulgence.</p>
+                    </div>
+                    <div class="luxury-card p-10 hover:bg-opacity-10 transition-all duration-500 group">
+                        <div class="w-16 h-16 border-2 border-gold flex items-center justify-center mb-8 group-hover:bg-gold transition-all duration-300">
+                            <svg class="w-8 h-8 text-gold group-hover:text-black transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl serif mb-4 text-gold">Complete Transformations</h3>
+                        <p class="text-gray-400 leading-relaxed font-light">Comprehensive estate renovations where every detail is orchestrated to create a harmonious symphony of luxury, from architectural elements to the finest finishes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section class="py-32 bg-gradient-to-b from-gray-900 to-black">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                <div class="w-20 h-px bg-gold mx-auto mb-12"></div>
+                <p class="text-2xl md:text-3xl serif text-gray-300 italic leading-relaxed mb-8">
+                    "ÉLITE transformed our vision into a reality beyond our wildest dreams. Every detail reflects their commitment to perfection and their understanding of true luxury."
+                </p>
+                <p class="text-gold tracking-widest text-sm uppercase">— Victoria Ashford, Greenwich Estate</p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-32 bg-black border-t border-gray-800">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+                <div class="w-20 h-px bg-gold mx-auto mb-8"></div>
+                <h2 class="text-4xl md:text-6xl font-light serif mb-6">Begin Your Journey</h2>
+                <p class="text-xl text-gray-400 mb-12 font-light">Experience the pinnacle of bespoke renovation</p>
+                <button class="bg-gold text-black px-12 py-5 text-sm tracking-widest uppercase font-medium hover:bg-yellow-600 transition-all duration-300" data-page="booking">Schedule Private Consultation</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery" class="page">
+        <section class="py-32 bg-black">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div class="w-20 h-px bg-gold mx-auto mb-8"></div>
+                    <h1 class="text-5xl md:text-7xl font-light serif mb-6">Our Portfolio</h1>
+                    <p class="text-xl text-gray-400 font-light">A curated collection of masterfully crafted spaces</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="group relative overflow-hidden aspect-[4/5] border border-gray-800">
+                        <div class="absolute inset-0 bg-gradient-to-br from-gold/20 to-black/80"></div>
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-10">
+                            <div class="text-white">
+                                <p class="text-xs tracking-widest uppercase text-gold mb-2">Culinary Excellence</p>
+                                <h3 class="text-3xl serif mb-3">Manhattan Penthouse</h3>
+                                <p class="text-sm text-gray-400 font-light">Bespoke Italian cabinetry with Calacatta marble and bronze accents</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden aspect-[4/5] border border-gray-800">
+                        <div class="absolute inset-0 bg-gradient-to-br from-gray-700/30 to-black/80"></div>
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-10">
+                            <div class="text-white">
+                                <p class="text-xs tracking-widest uppercase text-gold mb-2">Private Sanctuary</p>
+                                <h3 class="text-3xl serif mb-3">Beverly Hills Estate</h3>
+                                <p class="text-sm text-gray-400 font-light">Spa-inspired retreat with Thassos marble and handcrafted fixtures</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden aspect-[4/5] border border-gray-800">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-900/20 to-black/80"></div>
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-10">
+                            <div class="text-white">
+                                <p class="text-xs tracking-widest uppercase text-gold mb-2">Living Masterpiece</p>
+                                <h3 class="text-3xl serif mb-3">Hamptons Residence</h3>
+                                <p class="text-sm text-gray-400 font-light">Open-concept elegance with custom millwork and statement lighting</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden aspect-[4/5] border border-gray-800">
+                        <div class="absolute inset-0 bg-gradient-to-br from-slate-700/20 to-black/80"></div>
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-10">
+                            <div class="text-white">
+                                <p class="text-xs tracking-widest uppercase text-gold mb-2">Restful Haven</p>
+                                <h3 class="text-3xl serif mb-3">Aspen Chalet</h3>
+                                <p class="text-sm text-gray-400 font-light">Contemporary alpine luxury with European oak and cashmere textiles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-16">
+                    <button class="border-2 border-gold text-gold px-12 py-4 text-sm tracking-widest uppercase font-medium hover:bg-gold hover:text-black transition-all duration-300" data-page="booking">Discuss Your Vision</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Booking Page -->
+    <div id="booking" class="page">
+        <section class="py-32 bg-black">
+            <div class="max-w-3xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <div class="w-20 h-px bg-gold mx-auto mb-8"></div>
+                    <h1 class="text-5xl md:text-7xl font-light serif mb-6">Private Consultation</h1>
+                    <p class="text-xl text-gray-400 font-light">Begin your journey to extraordinary living</p>
+                </div>
+                <div class="luxury-card p-12">
+                    <div class="space-y-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">First Name</label>
+                                <input type="text" class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none transition-colors" placeholder="">
+                            </div>
+                            <div>
+                                <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">Last Name</label>
+                                <input type="text" class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none transition-colors" placeholder="">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">Email Address</label>
+                            <input type="email" class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none transition-colors" placeholder="">
+                        </div>
+                        <div>
+                            <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">Phone Number</label>
+                            <input type="tel" class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none transition-colors" placeholder="">
+                        </div>
+                        <div>
+                            <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">Property Location</label>
+                            <input type="text" class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none transition-colors" placeholder="">
+                        </div>
+                        <div>
+                            <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">Project Type</label>
+                            <select class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none transition-colors">
+                                <option>Culinary Space Renovation</option>
+                                <option>Private Sanctuary Design</option>
+                                <option>Complete Estate Transformation</option>
+                                <option>Custom Project</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">Investment Range</label>
+                            <select class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none transition-colors">
+                                <option>$100,000 - $250,000</option>
+                                <option>$250,000 - $500,000</option>
+                                <option>$500,000 - $1,000,000</option>
+                                <option>$1,000,000+</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">Vision & Aspirations</label>
+                            <textarea rows="5" class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none transition-colors" placeholder="Share your vision for this transformation..."></textarea>
+                        </div>
+                        <button class="w-full bg-gold text-black px-8 py-5 text-sm tracking-widest uppercase font-medium hover:bg-yellow-600 transition-all duration-300">Submit Inquiry</button>
+                        <p class="text-center text-xs text-gray-500 font-light">A member of our team will contact you within 24 hours to schedule your private consultation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section class="py-32 bg-black">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <div class="w-20 h-px bg-gold mx-auto mb-8"></div>
+                    <h1 class="text-5xl md:text-7xl font-light serif mb-6">Connect With Us</h1>
+                    <p class="text-xl text-gray-400 font-light">We look forward to bringing your vision to life</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-3xl serif mb-12 text-gold">Contact Information</h2>
+                        <div class="space-y-10">
+                            <div class="flex items-start">
+                                <div class="w-16 h-16 border-2 border-gold flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-6">
+                                    <h3 class="text-sm tracking-widest uppercase text-gray-400 mb-2">Telephone</h3>
+                                    <p class="text-gray-300 text-lg">+1 (555) 987-6543</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-16 h-16 border-2 border-gold flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-6">
+                                    <h3 class="text-sm tracking-widest uppercase text-gray-400 mb-2">Email</h3>
+                                    <p class="text-gray-300 text-lg">concierge@eliterenovations.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-16 h-16 border-2 border-gold flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-7 h-7 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div class="ml-6">
+                                    <h3 class="text-sm tracking-widest uppercase text-gray-400 mb-2">Atelier</h3>
+                                    <p class="text-gray-300 text-lg">520 Madison Avenue<br>Suite 3000<br>New York, NY 10022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12">
+                            <p class="text-sm text-gray-500 mb-4 font-light">Private consultations by appointment only</p>
+                            <button class="border-2 border-gold text-gold px-10 py-4 text-sm tracking-widest uppercase font-medium hover:bg-gold hover:text-black transition-all duration-300" data-page="booking">Schedule Visit</button>
+                        </div>
+                    </div>
+                    <div class="luxury-card p-10">
+                        <h2 class="text-3xl serif mb-8 text-gold">Send a Message</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">Name</label>
+                                <input type="text" class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">Email</label>
+                                <input type="email" class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-sm tracking-wider uppercase text-gray-400 mb-3">Subject</label>
+                                <input type="text" class="w-full bg-black border border-gray-700 px-6 py-4 text-white focus:border-gold focus:outline-none
