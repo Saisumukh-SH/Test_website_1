@@ -45,36 +45,54 @@ export function Contact() {
     {
       icon: Clock,
       title: 'Business Hours',
-      details: ['Monday - Friday: 8:00 AM - 6:00 PM', 'Saturday: 9:00 AM - 4:00 PM', 'Sunday: Closed'],
+      details: [
+        'Monday - Friday: 8:00 AM - 6:00 PM',
+        'Saturday: 9:00 AM - 4:00 PM',
+        'Sunday: Closed',
+      ],
     },
   ];
 
   return (
-    <div>
+    <div className="bg-neutral-950 text-white">
+
       {/* Header */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="mb-4">Get In Touch</h1>
-          <p className="text-gray-600">
-            Have a question or ready to start your renovation project? We'd love to hear from
-            you. Contact us today for a free consultation.
+      <section className="py-28">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h1 className="mb-6 text-5xl md:text-6xl font-semibold tracking-tight">
+            Get In Touch
+          </h1>
+
+          <p className="text-neutral-400 text-lg">
+            Have a question or ready to start your renovation project?
+            Contact us today for a free consultation.
           </p>
         </div>
       </section>
 
       {/* Contact Information Grid */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+      <section className="pb-16">
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+
             {contactInfo.map((item, index) => {
               const Icon = item.icon;
+
               return (
-                <div key={index} className="bg-white p-6 rounded-lg border border-gray-200">
-                  <Icon className="text-gray-900 mb-4" size={24} />
-                  <h3 className="mb-3">{item.title}</h3>
+                <div
+                  key={index}
+                  className="bg-neutral-900 p-8 rounded-2xl border border-neutral-800"
+                >
+                  <Icon className="text-white mb-4" size={26} />
+
+                  <h3 className="mb-4 text-lg font-medium">
+                    {item.title}
+                  </h3>
+
                   <div className="space-y-1">
                     {item.details.map((detail, idx) => (
-                      <p key={idx} className="text-gray-600">
+                      <p key={idx} className="text-neutral-400">
                         {detail}
                       </p>
                     ))}
@@ -82,123 +100,174 @@ export function Contact() {
                 </div>
               );
             })}
+
           </div>
 
           {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-lg border border-gray-200">
-              <h2 className="mb-6">Send Us a Message</h2>
+            <div className="bg-neutral-900 p-10 rounded-2xl border border-neutral-800">
+
+              <h2 className="mb-8 text-3xl font-semibold">
+                Send Us a Message
+              </h2>
+
               <form onSubmit={handleSubmit} className="space-y-6">
+
                 <div>
-                  <label className="block mb-2 text-gray-700">Name *</label>
+                  <label className="block mb-2 text-neutral-400">
+                    Name *
+                  </label>
+
                   <input
                     type="text"
                     name="name"
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900"
+                    className="w-full px-4 py-3 bg-neutral-950 border border-neutral-700 rounded-xl focus:outline-none focus:border-white"
                     placeholder="Your name"
                   />
                 </div>
 
                 <div>
-                  <label className="block mb-2 text-gray-700">Email *</label>
+                  <label className="block mb-2 text-neutral-400">
+                    Email *
+                  </label>
+
                   <input
                     type="email"
                     name="email"
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900"
+                    className="w-full px-4 py-3 bg-neutral-950 border border-neutral-700 rounded-xl focus:outline-none focus:border-white"
                     placeholder="your.email@example.com"
                   />
                 </div>
 
                 <div>
-                  <label className="block mb-2 text-gray-700">Subject *</label>
+                  <label className="block mb-2 text-neutral-400">
+                    Subject *
+                  </label>
+
                   <input
                     type="text"
                     name="subject"
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900"
+                    className="w-full px-4 py-3 bg-neutral-950 border border-neutral-700 rounded-xl focus:outline-none focus:border-white"
                     placeholder="How can we help?"
                   />
                 </div>
 
                 <div>
-                  <label className="block mb-2 text-gray-700">Message *</label>
+                  <label className="block mb-2 text-neutral-400">
+                    Message *
+                  </label>
+
                   <textarea
                     name="message"
                     required
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900"
-                    placeholder="Tell us about your project or inquiry..."
+                    className="w-full px-4 py-3 bg-neutral-950 border border-neutral-700 rounded-xl focus:outline-none focus:border-white"
+                    placeholder="Tell us about your project..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gray-900 text-white py-3 rounded-md hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-2"
+                  className="w-full bg-white text-black py-4 rounded-xl hover:scale-[1.02] transition inline-flex items-center justify-center gap-2"
                 >
                   <Send size={20} />
                   Send Message
                 </button>
+
               </form>
+
             </div>
 
             {/* CTA Section */}
-            <div className="space-y-6">
+            <div className="space-y-8">
+
               {/* Quick Booking */}
-              <div className="bg-gray-900 text-white p-8 rounded-lg">
-                <h2 className="mb-4 text-white">Ready to Get Started?</h2>
-                <p className="mb-6 text-gray-300">
-                  Skip the waiting and book a free consultation directly with our team.
+              <div className="bg-neutral-900 border border-neutral-800 text-white p-10 rounded-2xl">
+
+                <h2 className="mb-4 text-3xl font-semibold">
+                  Ready to Get Started?
+                </h2>
+
+                <p className="mb-8 text-neutral-400">
+                  Skip the waiting and book a free consultation
+                  directly with our team.
                 </p>
+
                 <Link
                   to="/booking"
-                  className="inline-block bg-white text-gray-900 px-6 py-3 rounded-md hover:bg-gray-100 transition-colors"
+                  className="inline-block bg-white text-black px-8 py-4 rounded-xl hover:scale-[1.02] transition"
                 >
                   Book Free Consultation
                 </Link>
+
               </div>
 
               {/* FAQ Section */}
-              <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
-                <h3 className="mb-4">Frequently Asked Questions</h3>
-                <div className="space-y-4">
+              <div className="bg-neutral-900 border border-neutral-800 p-10 rounded-2xl">
+
+                <h3 className="mb-6 text-xl font-semibold">
+                  Frequently Asked Questions
+                </h3>
+
+                <div className="space-y-6">
+
                   <div>
-                    <h4 className="mb-2">How long does a typical renovation take?</h4>
-                    <p className="text-gray-600">
-                      Project timelines vary based on scope, but most kitchen and bathroom
-                      renovations take 4-8 weeks.
+                    <h4 className="mb-2 font-medium">
+                      How long does a renovation take?
+                    </h4>
+
+                    <p className="text-neutral-400">
+                      Most kitchen and bathroom renovations
+                      take between 4–8 weeks depending on scope.
                     </p>
                   </div>
+
                   <div>
-                    <h4 className="mb-2">Do you offer free quotes?</h4>
-                    <p className="text-gray-600">
-                      Yes! We provide free, no-obligation consultations and detailed quotes
-                      for all projects.
+                    <h4 className="mb-2 font-medium">
+                      Do you offer free quotes?
+                    </h4>
+
+                    <p className="text-neutral-400">
+                      Yes. We provide free consultations
+                      and detailed quotes for all projects.
                     </p>
                   </div>
+
                   <div>
-                    <h4 className="mb-2">Are you licensed and insured?</h4>
-                    <p className="text-gray-600">
-                      Absolutely. We are fully licensed, bonded, and insured for your peace
-                      of mind.
+                    <h4 className="mb-2 font-medium">
+                      Are you licensed and insured?
+                    </h4>
+
+                    <p className="text-neutral-400">
+                      Absolutely. Our company is fully licensed,
+                      bonded, and insured.
                     </p>
                   </div>
+
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
       </section>
+
     </div>
   );
 }
