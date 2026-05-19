@@ -48,7 +48,7 @@ export function HeroComparison() {
             <div className="flex gap-4">
 
               <Link
-                to="/booking"
+                to="/journal"
                 className="bg-white text-black px-8 py-4 rounded-xl flex items-center gap-2 hover:scale-[1.02] transition"
               >
                 Get Free Quote

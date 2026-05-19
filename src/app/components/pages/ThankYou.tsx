@@ -25,7 +25,7 @@ export function ThankYou() {
         </h1>
 
         <p className="text-neutral-400 mb-10 text-lg">
-          Your booking request has been received.  
+          Your journal request has been received.  
           Our team will contact you within <span className="text-white">24 hours</span>.
         </p>
 
