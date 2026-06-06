@@ -406,7 +406,7 @@ export function Contact() {
                   type="submit"
                   className="
                     inline-flex items-center gap-3
-                    bg-[#B08D6D]
+                    bg-[#213A5C]
                     text-white
                     px-8 py-4
                     rounded-xl

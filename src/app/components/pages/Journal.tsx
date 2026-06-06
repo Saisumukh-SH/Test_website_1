@@ -191,7 +191,7 @@ export function Journal() {
               <button
                 className="
                   inline-flex items-center gap-3
-                  bg-[#B08D6D]
+                  bg-[#213A5C]
                   text-white
                   px-8 py-4 rounded-xl
                   hover:opacity-90
@@ -225,8 +225,8 @@ export function Journal() {
                   px-6 py-3 rounded-full border transition-all duration-300
                   ${
                     selectedCategory === category
-                      ? "bg-[#B08D6D] text-white border-[#B08D6D]"
-                      : "border-[#D8CEC2] bg-white text-[#5E564F] hover:border-[#B08D6D] hover:text-[#B08D6D]"
+                      ? "bg-[#213A5C] text-white border-[#213A5C]"
+                      : "border-[#D8CEC2] bg-white text-[#5E564F] hover:border-[#B08D6D] hover:text-[#213A5C]"
                   }
                 `}
               >
@@ -348,7 +348,7 @@ export function Journal() {
           <button
             className="
               inline-flex items-center gap-3
-              bg-[#B08D6D]
+              bg-[#213A5C]
               text-white
               px-8 py-4 rounded-xl
               hover:opacity-90

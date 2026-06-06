@@ -47,8 +47,7 @@ export function Gallery() {
       title: "Toorak Residence",
       category: "Kitchen",
       location: "Melbourne, Victoria",
-      image:
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1600",
+      image: "/images/project1.jpg"
     },
 
     {
@@ -56,8 +55,7 @@ export function Gallery() {
       title: "Brighton Coastal Home",
       category: "Bathroom",
       location: "Brighton, Victoria",
-      image:
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600",
+      image: "/images/project2.jpg"
     },
 
     {
@@ -65,8 +63,7 @@ export function Gallery() {
       title: "Hawthorn Interior",
       category: "Living",
       location: "Hawthorn, Victoria",
-      image:
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600",
+      image: "/images/project3.jpg"
     },
 
     {
@@ -74,8 +71,7 @@ export function Gallery() {
       title: "Modern Family Extension",
       category: "Full Renovation",
       location: "Kew, Victoria",
-      image:
-        "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?q=80&w=1600",
+      image: "/images/project4.jpg",
     },
 
     {
@@ -83,8 +79,7 @@ export function Gallery() {
       title: "Minimalist Kitchen Studio",
       category: "Kitchen",
       location: "South Yarra, Victoria",
-      image:
-        "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1600",
+      image: "/images/project5.jpg",
     },
 
     {
@@ -92,8 +87,7 @@ export function Gallery() {
       title: "Architectural Living Space",
       category: "Living",
       location: "Camberwell, Victoria",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600",
+      image: "/images/project6.jpg",
     },
   ];
 
@@ -117,16 +111,16 @@ export function Gallery() {
             </p>
 
             <h1 className="text-6xl md:text-7xl font-semibold leading-tight tracking-tight mb-8">
-              Contemporary Renovations
+              Featured
               <span className="block text-[#5E564F]">
-                Designed For Modern Living
+                Renovation Projects
               </span>
             </h1>
 
             <p className="text-[#5E564F] text-lg leading-relaxed max-w-2xl">
-              Explore a curated portfolio of luxury renovations inspired by
-              contemporary Australian interiors, architectural detail and
-              timeless material palettes.
+              Explore a collection of thoughtfully designed kitchen,
+              bathroom and home renovation projects crafted with
+              quality materials, expert workmanship and timeless design.
             </p>
 
           </div>
@@ -140,77 +134,101 @@ export function Gallery() {
 
         <div className="max-w-7xl mx-auto px-6">
 
-          <div className="grid lg:grid-cols-2 gap-14 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-            {/* IMAGE */}
-            <div className="relative overflow-hidden rounded-[32px] shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+            {/* LEFT CONTENT */}
+            <div>
 
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1600"
-                alt="Featured Project"
-                className="w-full h-[650px] object-cover hover:scale-[1.03] transition duration-700"
-              />
+              <p
+                className="
+                  text-xs
+                  uppercase
+                  tracking-[0.25em]
+                  text-[#74695E]
+                  mb-4
+                "
+              >
+                Featured Project
+              </p>
 
-            </div>
+              <h2
+                className="
+                  text-5xl
+                  md:text-6xl
+                  font-semibold
+                  leading-tight
+                  mb-8
+                "
+              >
+                Kitchen Renovation
+              </h2>
 
-            {/* CONTENT */}
-            <div className="space-y-8">
+              <div className="space-y-4 mb-8">
 
-              <div>
-
-                <p className="text-xs uppercase tracking-[0.25em] text-[#74695E] mb-4">
-                  Featured Project
+                <p className="text-lg">
+                  <strong>Location:</strong> Melbourne
                 </p>
 
-                <h2 className="text-5xl font-semibold leading-tight mb-6">
-                  Toorak Residence
-                </h2>
+                <p className="text-lg">
+                  <strong>Duration:</strong> 8 Weeks
+                </p>
 
-                <p className="text-[#5E564F] text-lg leading-relaxed">
-                  Inspired by warm Australian minimalism, this renovation
-                  combines travertine stone, oak timber joinery and ambient
-                  architectural lighting to create a timeless contemporary home.
+                <p className="text-lg">
+                  <strong>Scope:</strong> Full Kitchen Renovation
                 </p>
 
               </div>
 
-              {/* TAGS */}
-              <div className="flex flex-wrap gap-3">
-
-                {[
-                  "Travertine",
-                  "Warm Oak",
-                  "Architectural",
-                  "Contemporary",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="
-                      px-4 py-2 rounded-full
-                      border border-[#D8CEC2]
-                      bg-white
-                      text-sm text-[#5E564F]
-                    "
-                  >
-                    {tag}
-                  </span>
-                ))}
-
-              </div>
+              <p
+                className="
+                  text-[#5E564F]
+                  text-lg
+                  leading-relaxed
+                  mb-10
+                  max-w-xl
+                "
+              >
+                A complete transformation featuring custom joinery,
+                premium stone surfaces, integrated appliances and
+                contemporary finishes designed for modern living.
+              </p>
 
               <Link
                 to="/contact"
                 className="
-                  inline-flex items-center gap-3
-                  bg-[#B08D6D]
+                  inline-flex
+                  items-center
+                  justify-center
+                  bg-[#213A5C]
                   text-white
-                  px-8 py-4 rounded-xl
-                  hover:opacity-90 transition
+                  px-8
+                  py-4
+                  rounded-xl
+                  hover:opacity-90
+                  transition-all
+                  duration-300
                 "
               >
-                Start Similar Project
-                <ArrowRight size={18} />
+                Get A Cost Estimate
               </Link>
+
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div>
+
+              <img
+                src="/images/inside_1.jpeg"
+                alt="Kitchen Renovation"
+                className="
+                  w-full
+                  h-[650px]
+                  object-cover
+                  rounded-[24px]
+                  border border-[#D8CEC2]
+                  shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+                "
+              />
 
             </div>
 
@@ -235,8 +253,8 @@ export function Gallery() {
                   px-6 py-3 rounded-full border transition-all duration-300
                   ${
                     selectedCategory === category
-                      ? "bg-[#B08D6D] text-white border-[#B08D6D]"
-                      : "border-[#D8CEC2] bg-white text-[#5E564F] hover:border-[#B08D6D] hover:text-[#B08D6D]"
+                      ? "bg-[#213A5C] text-white border-[#213A5C]"
+                      : "border-[#D8CEC2] bg-white text-[#5E564F] hover:border-[#213A5C] hover:text-[#213A5C]"
                   }
                 `}
               >
@@ -255,65 +273,106 @@ export function Gallery() {
 
         <div className="max-w-7xl mx-auto px-6">
 
+          <div className="text-center mb-16">
+
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-[0.25em]
+                text-[#74695E]
+                mb-4
+              "
+            >
+              Portfolio
+            </p>
+
+            <h2
+              className="
+                text-4xl
+                md:text-5xl
+                font-semibold
+              "
+            >
+              Explore More
+              <span className="block text-[#5E564F]">
+                Renovation Projects
+              </span>
+            </h2>
+
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group"
+                className="
+                  bg-white
+                  border border-[#D8CEC2]
+                  overflow-hidden
+                  rounded-[24px]
+                  hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+                  transition-all duration-300
+                "
               >
 
-                <div
+                <img
+                  src={project.image}
+                  alt={project.title}
                   className="
-                    relative overflow-hidden rounded-[28px]
-                    border border-[#DDD3C7]
-                    bg-white
-                    shadow-[0_20px_60px_rgba(0,0,0,0.06)]
+                    w-full
+                    h-[320px]
+                    object-cover
                   "
-                >
+                />
 
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="
-                      w-full h-[420px] object-cover
-                      transition duration-700
-                      group-hover:scale-[1.04]
-                    "
-                  />
+                <div className="p-8">
 
-                  {/* OVERLAY */}
-                  <div
+                  <p
                     className="
-                      absolute inset-0
-                      bg-gradient-to-t
-                      from-[#2B2B2B]/80
-                      via-[#2B2B2B]/10
-                      to-transparent
-                      opacity-0
-                      group-hover:opacity-100
-                      transition duration-500
-                      flex items-end
+                      text-xs
+                      uppercase
+                      tracking-[0.25em]
+                      text-[#74695E]
+                      mb-3
                     "
                   >
+                    {project.category}
+                  </p>
 
-                    <div className="p-8">
+                  <h3
+                    className="
+                      text-2xl
+                      font-semibold
+                      mb-3
+                    "
+                  >
+                    {project.title}
+                  </h3>
 
-                      <p className="text-xs uppercase tracking-[0.25em] text-[#F5F1EB]/70 mb-3">
-                        {project.category}
-                      </p>
+                  <p
+                    className="
+                      text-[#5E564F]
+                      mb-6
+                    "
+                  >
+                    {project.location}
+                  </p>
 
-                      <h3 className="text-2xl font-semibold text-white mb-3">
-                        {project.title}
-                      </h3>
-
-                      <p className="text-[#F5F1EB]">
-                        {project.location}
-                      </p>
-
-                    </div>
-
-                  </div>
+                  <Link
+                    to="/contact"
+                    className="
+                      inline-flex
+                      items-center
+                      gap-2
+                      text-[#213A5C]
+                      font-medium
+                    "
+                  >
+                    View Project
+                    <ArrowRight size={16} />
+                  </Link>
 
                 </div>
 
@@ -327,39 +386,75 @@ export function Gallery() {
       </section>
 
       {/* CTA */}
-      <section className="py-32 bg-[#EFE7DD] border-t border-[#DDD3C7]">
+      <section
+        className="
+          py-32
+          bg-[#213A5C]
+          text-white
+        "
+      >
 
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-5xl mx-auto px-6 text-center">
 
-          <p className="text-xs uppercase tracking-[0.25em] text-[#74695E] mb-5">
-            Begin Your Renovation Journey
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.3em]
+              text-white/70
+              mb-5
+            "
+          >
+            Ready To Begin?
           </p>
 
-          <h2 className="text-5xl font-semibold leading-tight mb-8">
-            Designed Around
-            <span className="block text-[#5E564F]">
-              Your Lifestyle
+          <h2
+            className="
+              text-5xl
+              md:text-6xl
+              leading-tight
+              mb-8
+            "
+          >
+            Your Kitchen Should Be
+            <span className="block">
+              As Unique As The People
+              Who Use It
             </span>
           </h2>
 
-          <p className="text-[#5E564F] text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-            From concept to completion, we create thoughtfully designed
-            spaces tailored to contemporary Australian living.
+          <p
+            className="
+              text-lg
+              text-white/80
+              max-w-2xl
+              mx-auto
+              leading-relaxed
+              mb-10
+            "
+          >
+            Whether you're planning a complete renovation
+            or simply exploring ideas, we're here to guide
+            you through every step of the journey.
           </p>
 
           <Link
             to="/contact"
             className="
-              inline-flex items-center gap-3
-              bg-[#B08D6D]
-              text-white
-              px-8 py-4
+              inline-flex
+              items-center
+              gap-3
+              bg-white
+              text-[#213A5C]
+              px-10
+              py-5
               rounded-xl
-              hover:opacity-90
-              transition
+              font-medium
+              hover:scale-105
+              transition-all
             "
           >
-            Contact Us
+            Get A Cost Estimate
             <ArrowRight size={18} />
           </Link>
 

@@ -25,13 +25,13 @@ export function Footer() {
 ];
 
   return (
-    <footer className="bg-[#EFE7DD] border-t border-[#DDD3C7] overflow-hidden">
+    <footer className="bg-[#213A5C] text-white border-t border-[#DDD3C7] overflow-hidden">
 
         {/* ACCREDITATION BANNER */}
 <section className="
   py-12
-  bg-[#EFE7DD]
-  border-t border-[#D8CEC2]
+  bg-[#213A5C]
+  border-t border-white/10
   overflow-hidden
 ">
 
@@ -40,10 +40,10 @@ export function Footer() {
     text-xs font-semibold
     tracking-[0.25em]
     uppercase
-    text-[#74695E]
+    text-white/60
     mb-8
   ">
-    Recognised & Accredited
+    Trusted Industry Partners
   </p>
 
   <div className="
@@ -59,7 +59,7 @@ export function Footer() {
       "
       style={{
         background:
-          "linear-gradient(to right, #EFE7DD, transparent)",
+          "linear-gradient(to right, #213A5C, transparent)",
       }}
     />
 
@@ -71,7 +71,7 @@ export function Footer() {
       "
       style={{
         background:
-          "linear-gradient(to left, #EFE7DD, transparent)",
+          "linear-gradient(to left, #213A5C, transparent)",
       }}
     />
 
@@ -85,11 +85,12 @@ export function Footer() {
             flex-shrink-0
             flex flex-col items-center justify-center
             gap-3
-            bg-[#FFFFFF]
-            border border-[#D8CEC2]
+            bg-white/5
+            border border-white/10
+            backdrop-blur-sm
             rounded-2xl
             px-8 py-6
-            hover:border-[#B08D6D]
+            hover:border-[#213A5C]
             transition-colors duration-300
             mx-6
             shadow-[0_10px_30px_rgba(0,0,0,0.04)]
@@ -111,9 +112,9 @@ export function Footer() {
           <p className="
             text-xs uppercase
             tracking-[0.2em]
-            text-[#74695E]
+            text-white/60
           ">
-            Accredited
+          Industry Certified
           </p>
 
         </div>
@@ -125,132 +126,191 @@ export function Footer() {
 
 </section>
 
-      {/* MAIN FOOTER */}
-      <div className="max-w-7xl mx-auto px-6 py-24">
+{/* MAIN FOOTER */}
+    <div className="max-w-7xl mx-auto px-6 py-24">
 
-        <div className="grid lg:grid-cols-4 gap-16">
+      <div className="grid lg:grid-cols-4 gap-16">
 
-          {/* BRAND */}
-          <div className="lg:col-span-2">
+        {/* BRAND */}
+        <div className="lg:col-span-2">
 
-            <p className="eyebrow mb-6">
-              RENOV
-            </p>
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.3em]
+              text-white/60
+              mb-6
+            "
+          >
+            COMPANY NAME
+          </p>
 
-            <h3 className="
-              editorial-heading
-              text-4xl leading-tight mb-6
+          <h3
+            className="
+              text-4xl
+              md:text-5xl
+              font-semibold
+              leading-tight
+              mb-6
               max-w-xl
-            ">
-              Contemporary Renovations
-              Designed For Modern
-              Australian Living
-            </h3>
+            "
+          >
+            Designing Kitchens
+            Around The
+            Way You Live
+          </h3>
 
-            <p className="
-              body-muted
+          <p
+            className="
+              text-white/70
               text-lg
+              leading-relaxed
               max-w-lg
-            ">
-              We create thoughtfully designed residential
-              renovations inspired by architecture,
-              timeless materials and elevated living.
-            </p>
+            "
+          >
+            Thoughtfully designed kitchen renovations
+            combining functionality, craftsmanship,
+            premium materials and timeless design.
+          </p>
 
-          </div>
+        </div>
 
-          {/* NAVIGATION */}
-          <div>
+        {/* QUICK LINKS */}
+        <div>
 
-            <p className="eyebrow mb-6">
-              Navigation
-            </p>
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.25em]
+              text-white/60
+              mb-6
+            "
+          >
+            Navigation
+          </p>
 
-            <div className="space-y-4">
+          <div className="space-y-4">
 
-              <Link
-                to="/"
-                className="block btn-ghost"
-              >
-                Home
-              </Link>
+            <Link
+              to="/"
+              className="block hover:text-white/70 transition"
+            >
+              Home
+            </Link>
 
-              <Link
-                to="/gallery"
-                className="block btn-ghost"
-              >
-                Our Projects
-              </Link>
+            <Link
+              to="/gallery"
+              className="block hover:text-white/70 transition"
+            >
+              Projects
+            </Link>
 
-              <Link
-                to="/journal"
-                className="block btn-ghost"
-              >
-                Journal
-              </Link>
+            <Link
+              to="/journal"
+              className="block hover:text-white/70 transition"
+            >
+              Inspiration
+            </Link>
 
-              <Link
-                to="/contact"
-                className="block btn-ghost"
-              >
-                Contact
-              </Link>
-
-            </div>
-
-          </div>
-
-          {/* CONTACT */}
-          <div>
-
-            <p className="eyebrow mb-6">
+            <Link
+              to="/contact"
+              className="block hover:text-white/70 transition"
+            >
               Contact
-            </p>
-
-            <div className="space-y-4 body-muted">
-
-              <p>
-                hello@renov.com.au
-              </p>
-
-              <p>
-                +61 4 1234 5678
-              </p>
-
-              <p>
-                Melbourne, Victoria
-              </p>
-
-              <p>
-                @renovstudio
-              </p>
-
-            </div>
+            </Link>
 
           </div>
 
         </div>
 
-        {/* BOTTOM */}
-        <div className="
-          mt-20 pt-8
-          border-t border-[#DDD3C7]
-          flex flex-col md:flex-row
-          justify-between items-center
-          gap-4
-        ">
+        {/* CONTACT */}
+        <div>
 
-          <p className="text-sm text-[#74695E]">
-            © 2026 RENOV. All rights reserved.
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.25em]
+              text-white/60
+              mb-6
+            "
+          >
+            Contact
           </p>
 
-          <p className="text-sm text-[#74695E]">
-            Designed with a contemporary architectural approach.
-          </p>
+          <div className="space-y-4 text-white/80">
+
+            <p>hello@company.com.au</p>
+
+            <p>+61 4 1234 5678</p>
+
+            <p>Melbourne, Victoria</p>
+
+            <p>Mon – Fri | 8am – 5pm</p>
+
+          </div>
 
         </div>
 
       </div>
+
+      {/* DIVIDER */}
+      <div
+        className="
+          border-white/10
+          mt-20
+          pt-8
+        "
+      >
+
+        <div
+          className="
+            flex
+            flex-col
+            md:flex-row
+            justify-between
+            items-center
+            gap-4
+          "
+        >
+
+          <p className="text-sm text-white/50">
+            © 2026 COMPANY NAME. All rights reserved.
+          </p>
+
+          <div
+            className="
+              flex
+              items-center
+              gap-6
+              text-sm
+              text-white/50
+            "
+          >
+
+            <Link
+              to="/privacy"
+              className="hover:text-white transition"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              to="/terms"
+              className="hover:text-white transition"
+            >
+              Terms & Conditions
+            </Link>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
     </footer>
   );

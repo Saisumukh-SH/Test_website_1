@@ -3,19 +3,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
-import { ProjectBoard } from "./ProjectBoard";
 import { fadeUp, staggerContainer } from "../lib/motion";
 
 export function Home() {
-
-  const services = [
-    "Kitchen Remodeling",
-    "Bathroom Renovation",
-    "Home Extensions",
-    "Interior Design",
-    "Flooring & Tiling",
-    "Painting & Decoration",
-  ];
 
   const stats = [
     { value: "500+", label: "Projects Completed" },
@@ -62,6 +52,103 @@ export function Home() {
     },
   ];
 
+  const journeySteps = [
+  {
+    number: "01",
+    title: "Discover",
+    description:
+      "We get to know you, your lifestyle, your space, and what matters most."
+  },
+  {
+    number: "02",
+    title: "Explore",
+    description:
+      "We assess your existing space and identify opportunities to improve functionality."
+  },
+  {
+    number: "03",
+    title: "Curate",
+    description:
+      "Through moodboards, material palettes, and design inspiration we develop a clear direction."
+  },
+  {
+    number: "04",
+    title: "Design",
+    description:
+      "We create bespoke layouts and space planning solutions tailored to your home."
+  },
+  {
+    number: "05",
+    title: "Visualise",
+    description:
+      "Experience your future kitchen through realistic 3D renders before construction."
+  },
+  {
+    number: "06",
+    title: "Plan",
+    description:
+      "Detailed drawings, specifications, costing, and project planning are prepared."
+  },
+  {
+    number: "07",
+    title: "Create",
+    description:
+      "Our team coordinates trades, manages construction, and oversees quality."
+  },
+  {
+    number: "08",
+    title: "Enjoy",
+    description:
+      "The final reveal. Your new kitchen becomes the heart of your home."
+  }
+];
+
+  const whyChooseUs = [
+  {
+    title: "Designed Around You",
+    description:
+      "Every kitchen begins with thoughtful planning and spatial design. We create layouts that maximise functionality, improve flow, and reflect the way you live."
+  },
+  {
+    title: "A Seamless Renovation Experience",
+    description:
+      "From the first consultation to final handover, we manage every stage of your renovation with clear communication and complete peace of mind."
+  },
+  {
+    title: "Materials That Tell Your Story",
+    description:
+      "We carefully select materials, finishes, stone, lighting, and joinery that complement your home's character and lifestyle."
+  },
+  {
+    title: "See It Before We Build It",
+    description:
+      "Visualise your new kitchen before construction begins through realistic 3D renders and detailed design presentations."
+  }
+];
+
+const companyDifference = [
+  {
+    title: "Thoughtfully Designed",
+    description:
+      "Every kitchen is tailored to your lifestyle, combining intelligent space planning, timeless aesthetics, and practical functionality."
+  },
+  {
+    title: "Efficient & Stress-Free",
+    description:
+      "Our streamlined process and trusted network of trades ensure minimal disruption to your home and daily routine."
+  },
+  {
+    title: "Seamlessly Managed",
+    description:
+      "From concept design and material selections to construction and final handover, we manage every detail."
+  },
+  {
+    title: "Built To Endure",
+    description:
+      "We partner with skilled craftsmen and premium suppliers to deliver kitchens designed to stand the test of time."
+  }
+];
+
   const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
@@ -78,501 +165,788 @@ export function Home() {
     <div className="bg-[#F8F5F0] text-[#2B2B2B] overflow-hidden">
 
       {/* HERO */}
-      <motion.section
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        className="pt-32 pb-28"
+      <section className="pt-20 pb-24">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* LEFT CONTENT */}
+            <div>
+
+              <p
+                className="
+                  text-xs
+                  uppercase
+                  tracking-[0.3em]
+                  text-[#74695E]
+                  mb-6
+                "
+              >
+                Kitchen Renovation Specialists
+              </p>
+
+              <h1
+                className="
+                  editorial-heading
+                  text-5xl
+                  md:text-7xl
+                  leading-[1.05]
+                  mb-8
+                "
+              >
+                Designing Kitchens
+                Around The
+                <span className="block text-[#5E564F]">
+                  Way You Live
+                </span>
+              </h1>
+
+              <p
+                className="
+                  text-[#5E564F]
+                  text-lg
+                  leading-relaxed
+                  max-w-xl
+                  mb-10
+                "
+              >
+                We believe every great home begins with a great kitchen.
+                That's why we combine innovative design, quality materials,
+                and construction expertise to create spaces that bring
+                families together and make everyday living better.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+
+                <Link
+                  to="/contact"
+                  className="
+                    inline-flex items-center
+                    justify-center
+                    bg-[#213A5C]
+                    text-white
+                    px-8 py-4
+                    rounded-xl
+                    hover:opacity-90
+                    transition
+                  "
+                >
+                  Get A Cost Estimate
+                </Link>
+
+                <Link
+                  to="/gallery"
+                  className="
+                    inline-flex items-center
+                    justify-center
+                    border border-[#213A5C]
+                    text-[#213A5C]
+                    px-8 py-4
+                    rounded-xl
+                    hover:bg-[#213A5C]
+                    hover:text-white
+                    transition
+                  "
+                >
+                  View Projects
+                </Link>
+
+              </div>
+
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div>
+
+              <img
+                src="/images/inside_1.jpeg"
+                alt="Kitchen Renovation"
+                className="
+                  w-full
+                  h-[650px]
+                  object-cover
+                  rounded-[24px]
+                  border border-[#D8CEC2]
+                  shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+                "
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section
+        className="
+          py-24
+          border-t border-[#D8CEC2]
+          border-b border-[#D8CEC2]
+          bg-[#F8F5F0]
+        "
       >
 
         <div className="max-w-7xl mx-auto px-6">
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            animate="visible"
-            className="text-center max-w-5xl mx-auto"
-          >
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
 
-            <motion.p
-              variants={fadeUp}
-              className="eyebrow mb-6"
-            >
-              Luxury Residential Renovations
-            </motion.p>
+            <div>
 
-            <motion.h1
-              variants={fadeUp}
-              className="
-                editorial-heading
-                text-6xl md:text-8xl
-                leading-[0.95]
-                mb-8
-              "
-            >
-              Crafted Spaces
-              <span className="block text-[#5E564F]">
-                Inspired By Contemporary Design
-              </span>
-            </motion.h1>
-
-            <motion.p
-              variants={fadeUp}
-              className="
-                body-muted
-                text-lg md:text-xl
-                max-w-3xl mx-auto
-                mb-12
-              "
-            >
-              We design and build high-end residential renovations
-              blending architectural precision, timeless materials
-              and modern Australian living.
-            </motion.p>
-
-            <motion.div
-              variants={fadeUp}
-              className="flex justify-center gap-5 flex-wrap"
-            >
-
-              <Link
-                to="/contact"
-                className="btn-primary"
-              >
-                Start Your Project
-              </Link>
-
-              <Link
-                to="/gallery"
-                className="btn-secondary"
-              >
-                View Our Projects
-              </Link>
-
-            </motion.div>
-
-          </motion.div>
-
-        </div>
-
-      </motion.section>
-
-      {/* STATS */}
-      <motion.section
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="
-          section-padding
-          border-y border-[#DDD3C7]
-          bg-[#EFE7DD]
-        "
-      >
-
-        <div className="max-w-6xl mx-auto px-6">
-
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
-          >
-
-            {stats.map((stat, index) => (
-              <motion.div
-                variants={fadeUp}
-                key={index}
+              <p
                 className="
-                  card-soft
-                  p-12 text-center
+                  text-xs uppercase
+                  tracking-[0.3em]
+                  text-[#74695E]
+                  mb-4
+                "
+              >
+                Why Choose Us?
+              </p>
+
+              <h2
+                className="
+                  editorial-heading
+                  text-4xl md:text-5xl
+                  leading-tight
+                "
+              >
+                The Space That Brings
+                <span className="block text-[#5E564F]">
+                  Everyone Together
+                </span>
+              </h2>
+
+            </div>
+
+            <Link
+              to="/contact"
+              className="
+                inline-flex items-center
+                bg-[#213A5C]
+                text-white
+                px-8 py-4
+                rounded-xl
+                hover:opacity-90
+                transition
+              "
+            >
+              Get A Cost Estimate
+            </Link>
+
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            {whyChooseUs.map((item) => (
+
+              <div
+                key={item.title}
+                className="
+                  bg-[#E9EEF2]
+                  p-8
+                  min-h-[320px]
+                  border border-[#D8CEC2]
                 "
               >
 
-                <div className="text-5xl font-semibold mb-3">
-                  {stat.value}
-                </div>
+                <h3
+                  className="
+                    text-xl
+                    font-semibold
+                    mb-5
+                  "
+                >
+                  {item.title}
+                </h3>
 
-                <p className="body-muted uppercase tracking-wide text-sm">
-                  {stat.label}
+                <p
+                  className="
+                    text-[#5E564F]
+                    leading-relaxed
+                  "
+                >
+                  {item.description}
                 </p>
 
-              </motion.div>
+              </div>
+
             ))}
 
-          </motion.div>
+          </div>
 
         </div>
 
-      </motion.section>
+      </section>
 
-      {/* PROJECT BOARD */}
-      <motion.section
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+      {/* COMPANY DIFFERENCE */}
+      <section className="py-24">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8 mb-16">
+
+            <div>
+
+              <p
+                className="
+                  text-xs
+                  uppercase
+                  tracking-[0.3em]
+                  text-[#74695E]
+                  mb-4
+                "
+              >
+                Why We're Different
+              </p>
+
+              <h2
+                className="
+                  editorial-heading
+                  text-4xl
+                  md:text-5xl
+                  leading-tight
+                "
+              >
+                The Company Name
+                <span className="block text-[#5E564F]">
+                  Difference
+                </span>
+              </h2>
+
+            </div>
+
+            <Link
+              to="/contact"
+              className="
+                inline-flex items-center
+                bg-[#213A5C]
+                text-white
+                px-8 py-4
+                rounded-xl
+                hover:opacity-90
+                transition
+              "
+            >
+              Get A Cost Estimate
+            </Link>
+
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+
+            {companyDifference.map((item, index) => (
+
+              <div
+                key={item.title}
+                className="
+                  border border-[#D8CEC2]
+                  bg-white
+                  overflow-hidden
+                "
+              >
+
+                {/* IMAGE */}
+
+                <img
+                  src={
+                    index === 0
+                      ? "/images/inside_2.jpeg"
+                      : index === 1
+                      ? "/images/inside_3.jpeg"
+                      : index === 2
+                      ? "/images/inside_4.png"
+                      : "/images/inside_indust_1.jpg"
+                  }
+                  alt={item.title}
+                  className="
+                    w-full
+                    h-[260px]
+                    object-cover
+                  "
+                />
+
+                {/* CONTENT */}
+
+                <div className="p-8">
+
+                  <h3
+                    className="
+                      text-2xl
+                      font-semibold
+                      mb-4
+                    "
+                  >
+                    {item.title}
+                  </h3>
+
+                  <p
+                    className="
+                      text-[#5E564F]
+                      leading-relaxed
+                    "
+                  >
+                    {item.description}
+                  </p>
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* THE JOURNEY HOME */}
+      <section
         className="
-          section-padding
-          border-b border-[#DDD3C7]
+          py-28
+          bg-[#F5F1EB]
+          border-y border-[#D8CEC2]
         "
-      >
-
-        <ProjectBoard />
-
-      </motion.section>
-
-      {/* SERVICES */}
-      <motion.section
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="section-padding"
       >
 
         <div className="max-w-7xl mx-auto px-6">
 
-          <div className="max-w-3xl mb-20">
+          {/* HEADER */}
 
-            <p className="eyebrow mb-4">
-              Services
+          <div className="max-w-4xl mb-20">
+
+            <p
+              className="
+                text-xs uppercase
+                tracking-[0.3em]
+                text-[#74695E]
+                mb-4
+              "
+            >
+              The Journey Home
             </p>
 
-            <h2 className="
-              editorial-heading
-              text-5xl leading-tight mb-6
-            ">
-              Tailored Renovation
+            <h2
+              className="
+                editorial-heading
+                text-4xl
+                md:text-5xl
+                leading-tight
+                mb-6
+              "
+            >
+              From Vision To
               <span className="block text-[#5E564F]">
-                Solutions
+                Reality
               </span>
             </h2>
 
-            <p className="body-muted text-lg">
-              From concept development to final construction,
-              our team delivers refined renovations designed
-              around contemporary Australian lifestyles.
+            <p
+              className="
+                text-[#5E564F]
+                text-lg
+                leading-relaxed
+                max-w-3xl
+              "
+            >
+              A great kitchen is more than a place to cook.
+              It is where life happens. Our process ensures
+              every detail is thoughtfully planned and executed.
             </p>
 
           </div>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
+          {/* FEATURE IMAGE */}
 
-            {services.map((service, index) => (
-              <motion.div
-                variants={fadeUp}
-                key={index}
-                className="card-primary p-10"
+          <img
+            src="/images/inside_indust_1.jpg"
+            alt="Journey"
+            className="
+              w-full
+              h-[500px]
+              object-cover
+              rounded-[24px]
+              mb-16
+            "
+          />
+
+          {/* PROCESS GRID */}
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            {journeySteps.map((step) => (
+
+              <div
+                key={step.number}
+                className="
+                  bg-white
+                  border border-[#D8CEC2]
+                  p-8
+                "
               >
 
-                <CheckCircle
-                  className="text-[#B08D6D] mb-6"
-                  size={26}
-                />
+                <div
+                  className="
+                    text-5xl
+                    font-semibold
+                    text-[#213A5C]
+                    mb-4
+                  "
+                >
+                  {step.number}
+                </div>
 
-                <h3 className="text-2xl font-medium mb-4">
-                  {service}
+                <h3
+                  className="
+                    text-2xl
+                    font-semibold
+                    mb-4
+                  "
+                >
+                  {step.title}
                 </h3>
 
-                <p className="body-muted">
-                  Premium craftsmanship and carefully curated
-                  material selections tailored to your home.
+                <p
+                  className="
+                    text-[#5E564F]
+                    leading-relaxed
+                  "
+                >
+                  {step.description}
                 </p>
 
-              </motion.div>
+              </div>
+
             ))}
 
-          </motion.div>
+          </div>
 
         </div>
 
-      </motion.section>
+      </section>
 
-      {/* DESIGN INSPIRATION */}
-      <motion.section
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+      {/* ABOUT COMPANY */}
+      <section className="py-28">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            {/* CONTENT */}
+
+            <div>
+
+              <p
+                className="
+                  text-xs uppercase
+                  tracking-[0.3em]
+                  text-[#74695E]
+                  mb-4
+                "
+              >
+                About Us
+              </p>
+
+              <h2
+                className="
+                  editorial-heading
+                  text-4xl md:text-5xl
+                  leading-tight
+                  mb-8
+                "
+              >
+                Thoughtful Design.
+                <span className="block text-[#5E564F]">
+                  Exceptional Craftsmanship.
+                </span>
+              </h2>
+
+              <p className="text-[#5E564F] leading-relaxed mb-6">
+                At Company Name, we combine architectural
+                expertise, thoughtful design, and meticulous
+                project management to create kitchens that are
+                as functional as they are beautiful.
+              </p>
+
+              <p className="text-[#5E564F] leading-relaxed mb-6">
+                From curated material selections and detailed
+                design development to construction and final
+                handover, every stage is carefully managed by
+                our experienced team.
+              </p>
+
+              <p className="text-[#5E564F] leading-relaxed">
+                Working alongside trusted suppliers and skilled
+                craftsmen, we deliver kitchens tailored to your
+                lifestyle, budget, and vision.
+              </p>
+
+            </div>
+
+            {/* IMAGE */}
+
+            <div>
+
+              <img
+                src="/images/inside_3.jpeg"
+                alt="About Company"
+                className="
+                  w-full
+                  h-[700px]
+                  object-cover
+                  rounded-[24px]
+                  border border-[#D8CEC2]
+                "
+              />
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section
         className="
-          section-padding
+          py-28
           bg-[#F5F1EB]
-          border-y border-[#DDD3C7]
+          border-y border-[#D8CEC2]
         "
       >
 
         <div className="max-w-7xl mx-auto px-6">
 
-          <div className="max-w-3xl mb-24">
+          <div className="text-center mb-16">
 
-            <p className="eyebrow mb-4">
-              Inspired By Australian Design
+            <p
+              className="
+                text-xs uppercase
+                tracking-[0.3em]
+                text-[#74695E]
+                mb-4
+              "
+            >
+              Testimonials
             </p>
 
-            <h2 className="
-              editorial-heading
-              text-5xl leading-tight mb-6
-            ">
-              Renovations Influenced By
+            <h2
+              className="
+                editorial-heading
+                text-4xl md:text-5xl
+              "
+            >
+              Stories From The
               <span className="block text-[#5E564F]">
-                Contemporary Interiors
+                Heart Of The Home
               </span>
             </h2>
 
-            <p className="body-muted text-lg">
-              Inspired by leading Australian architecture and
-              interior publications including est living and
-              The Local Project.
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            {[1, 2, 3].map((item) => (
+
+              <div
+                key={item}
+                className="
+                  bg-white
+                  border border-[#D8CEC2]
+                  p-8
+                "
+              >
+
+                <div className="text-[#B08D6D] mb-4">
+                  ★★★★★
+                </div>
+
+                <p
+                  className="
+                    text-[#5E564F]
+                    leading-relaxed
+                    mb-6
+                  "
+                >
+                  The entire renovation process was seamless.
+                  The attention to detail and craftsmanship
+                  exceeded our expectations.
+                </p>
+
+                <h4 className="font-semibold">
+                  Melbourne Client
+                </h4>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* FEATURED PROJECTS */}
+      <section className="py-28">
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          <div className="text-center mb-16">
+
+            <p
+              className="
+                text-xs uppercase
+                tracking-[0.3em]
+                text-[#74695E]
+                mb-4
+              "
+            >
+              Featured Projects
             </p>
+
+            <h2
+              className="
+                editorial-heading
+                text-4xl md:text-5xl
+              "
+            >
+              Latest Kitchen
+              <span className="block text-[#5E564F]">
+                Projects
+              </span>
+            </h2>
 
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            {/* LEFT */}
-            <motion.div
-              variants={fadeUp}
+            <div>
+
+              <h3
+                className="
+                  text-3xl
+                  font-semibold
+                  mb-6
+                "
+              >
+                Kitchen Renovation
+              </h3>
+
+              <p className="mb-4">
+                <strong>Location:</strong> Melbourne
+              </p>
+
+              <p className="mb-4">
+                <strong>Duration:</strong> 8 Weeks
+              </p>
+
+              <p className="text-[#5E564F] leading-relaxed">
+                Complete kitchen transformation featuring
+                premium joinery, stone surfaces, integrated
+                appliances and contemporary finishes.
+              </p>
+
+            </div>
+
+            <img
+              src="/images/project1.jpg"
+              alt="Project"
               className="
-                relative h-[720px]
-                overflow-hidden
-                rounded-[32px]
-                border border-[#DDD3C7]
-                bg-white
-                shadow-premium
+                w-full
+                h-[600px]
+                object-cover
+                rounded-[24px]
               "
-            >
-
-              {inspirationSlides.map((slide, index) => (
-                <img
-                  key={index}
-                  src={slide.projectImage}
-                  alt={slide.title}
-                  className={`
-                    absolute inset-0
-                    w-full h-full object-cover
-                    transition-all duration-[1800ms] ease-out
-                    ${
-                      activeSlide === index
-                        ? "opacity-100 scale-100"
-                        : "opacity-0 scale-[1.05]"
-                    }
-                  `}
-                />
-              ))}
-
-              <div className="
-                absolute inset-0
-                bg-gradient-to-t
-                from-[#2B2B2B]/80
-                via-[#2B2B2B]/20
-                to-transparent
-              " />
-
-              <div className="absolute bottom-0 left-0 p-10 max-w-xl z-10">
-
-                <div className="
-                  text-8xl font-semibold
-                  text-[#F5F1EB]/40 mb-6
-                ">
-                  0{activeSlide + 1}
-                </div>
-
-                <p className="
-                  text-xs uppercase
-                  tracking-[0.25em]
-                  text-[#F5F1EB]
-                  mb-4
-                ">
-                  Featured Renovation
-                </p>
-
-                <h3 className="
-                  text-4xl font-semibold
-                  text-white mb-5
-                ">
-                  {inspirationSlides[activeSlide].title}
-                </h3>
-
-                <p className="
-                  text-[#F5F1EB]
-                  leading-relaxed mb-6
-                ">
-                  {inspirationSlides[activeSlide].description}
-                </p>
-
-                <div className="flex flex-wrap gap-3">
-
-                  {inspirationSlides[activeSlide].tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="
-                        text-xs uppercase tracking-wide
-                        border border-white/20
-                        bg-white/10
-                        backdrop-blur-sm
-                        px-4 py-2 rounded-full
-                        text-[#F5F1EB]
-                      "
-                    >
-                      {tag}
-                    </span>
-                  ))}
-
-                </div>
-
-              </div>
-
-            </motion.div>
-
-            {/* RIGHT */}
-            <motion.div
-              variants={fadeUp}
-              className="space-y-8"
-            >
-
-              <div>
-
-                <p className="eyebrow mb-4">
-                  Design Reference
-                </p>
-
-                <h3 className="
-                  editorial-heading
-                  text-4xl mb-5
-                ">
-                  Editorial Australian Inspiration
-                </h3>
-
-                <p className="body-muted text-lg">
-                  A curated collection of contemporary interiors
-                  inspired by luxury Australian architecture.
-                </p>
-
-              </div>
-
-              <div className="
-                relative h-[380px]
-                overflow-hidden
-                rounded-[32px]
-                border border-[#DDD3C7]
-                bg-white
-                shadow-soft
-              ">
-
-                {inspirationSlides.map((slide, index) => (
-                  <img
-                    key={index}
-                    src={slide.inspirationImage}
-                    alt={slide.title}
-                    className={`
-                      absolute inset-0
-                      w-full h-full object-cover
-                      transition-all duration-[1800ms] ease-out
-                      ${
-                        activeSlide === index
-                          ? "opacity-100 scale-100"
-                          : "opacity-0 scale-[1.03]"
-                      }
-                    `}
-                  />
-                ))}
-
-              </div>
-
-              <div className="card-soft p-8">
-
-                <p className="eyebrow mb-3">
-                  Inspiration Source
-                </p>
-
-                <p className="
-                  text-2xl
-                  leading-relaxed mb-8
-                ">
-                  {inspirationSlides[activeSlide].source}
-                </p>
-
-                <div className="flex gap-2">
-
-                  {inspirationSlides.map((_, index) => (
-                    <div
-                      key={index}
-                      className={`
-                        h-[3px] rounded-full transition-all duration-500
-                        ${
-                          activeSlide === index
-                            ? "w-16 bg-[#B08D6D]"
-                            : "w-8 bg-[#D8CEC2]"
-                        }
-                      `}
-                    />
-                  ))}
-
-                </div>
-
-              </div>
-
-            </motion.div>
+            />
 
           </div>
 
         </div>
 
-      </motion.section>
+      </section>
 
-      {/* CTA */}
-      <motion.section
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        className="section-padding text-center"
+      {/* FINAL CTA */}
+      <section
+        className="
+          py-32
+          bg-[#213A5C]
+          text-white
+        "
       >
 
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-5xl mx-auto px-6 text-center">
 
-          <p className="eyebrow mb-4">
-            Begin Your Renovation Journey
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.3em]
+              text-white/70
+              mb-5
+            "
+          >
+            Ready To Begin?
           </p>
 
-          <h2 className="
-            editorial-heading
-            text-5xl leading-tight mb-8
-          ">
-            Designed With Precision.
-            <span className="block text-[#5E564F]">
-              Built For Modern Living.
+          <h2
+            className="
+              text-5xl
+              md:text-6xl
+              leading-tight
+              mb-8
+            "
+          >
+            Your Kitchen Should Be
+            <span className="block">
+              As Unique As The People
+              Who Use It
             </span>
           </h2>
 
-          <p className="
-            body-muted text-lg
-            max-w-2xl mx-auto mb-10
-          ">
-            Book a consultation and discover how we can
-            transform your home into a timeless
-            architectural space.
+          <p
+            className="
+              text-lg
+              text-white/80
+              max-w-2xl
+              mx-auto
+              leading-relaxed
+              mb-10
+            "
+          >
+            Whether you're planning a complete kitchen renovation
+            or simply exploring ideas, we're here to guide you
+            through every step of the journey.
           </p>
 
           <Link
             to="/contact"
-            className="btn-primary"
+            className="
+              inline-flex
+              items-center
+              justify-center
+              bg-white
+              text-[#213A5C]
+              px-10
+              py-5
+              rounded-xl
+              font-medium
+              hover:scale-105
+              transition-all
+              duration-300
+            "
           >
-            Contact Us
-            <ArrowRight size={18} />
+            Get A Cost Estimate
           </Link>
 
         </div>
 
-      </motion.section>
+      </section>
 
     </div>
   );

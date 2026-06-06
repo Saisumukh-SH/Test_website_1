@@ -10,9 +10,11 @@ export function Navigation() {
   const [projectsOpen, setProjectsOpen] = useState(false);
 
   const links = [
-    { name: "Home", path: "/" },
-    { name: "Journal", path: "/journal" },
-    { name: "Contact", path: "/contact" },
+    { name: "About Us", path: "/about" },
+    { name: "Inspiration", path: "/journal" },
+    { name: "Our Services", path: "/services" },
+    { name: "Blog", path: "/journal" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   const projectLinks = [
@@ -39,47 +41,50 @@ export function Navigation() {
       className="
         sticky top-0 z-50
         backdrop-blur-xl
-        bg-[#F8F5F0]/85
-        border-b border-[#DDD3C7]
+        bg-white/95
+        border-b border-[#E5E7EB]
       "
     >
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-28">
 
           {/* LOGO */}
           <Link
             to="/"
-            className="
-              text-[#2B2B2B]
-              text-2xl
-              font-semibold
-              tracking-tight
-            "
+            className="text-[#2B2B2B]"
           >
-            RENOvation
+            <div>
+
+              <h1 className="text-xl font-semibold tracking-wide">
+                RENOvation
+              </h1>
+
+
+            </div>
           </Link>
 
           {/* DESKTOP NAV */}
           <div className="hidden md:flex items-center gap-10">
-
-            {/* HOME */}
+          {links.slice(0, 3).map((link) => (
             <Link
-              to="/"
+              key={link.path}
+              to={link.path}
               className={`
                 text-[15px]
                 transition-all duration-300
-                hover:text-[#B08D6D]
+                hover:text-[#213A5C]
                 ${
-                  location.pathname === "/"
-                    ? "text-[#B08D6D]"
+                  location.pathname === link.path
+                    ? "text-[#213A5C]"
                     : "text-[#5E564F]"
                 }
               `}
             >
-              Home
+              {link.name}
             </Link>
+          ))}
 
             {/* PROJECTS DROPDOWN */}
             <div
@@ -93,11 +98,11 @@ export function Navigation() {
                   flex items-center gap-2
                   text-[15px]
                   text-[#5E564F]
-                  hover:text-[#B08D6D]
+                  hover:text-[#213A5C]
                   transition-all duration-300
                 "
               >
-                Our Projects
+                Projects
 
                 <ChevronDown
                   size={16}
@@ -111,10 +116,10 @@ export function Navigation() {
               {/* DROPDOWN */}
               <div
                 className={`
-                  absolute top-full left-0 mt-5 w-[320px]
-                  rounded-[28px]
+                  absolute top-full left-0 mt-5 w-[360px]
+                  rounded-[20px]
                   border border-[#DDD3C7]
-                  bg-[#FFFFFF]
+                  bg-white
                   shadow-[0_20px_60px_rgba(0,0,0,0.08)]
                   p-6
                   transition-all duration-300
@@ -150,7 +155,7 @@ export function Navigation() {
                         rounded-2xl
                         text-[#5E564F]
                         hover:bg-[#F5F1EB]
-                        hover:text-[#B08D6D]
+                        hover:text-[#213A5C]
                         transition-all duration-300
                         group
                       "
@@ -181,33 +186,30 @@ export function Navigation() {
 
             </div>
 
-            {/* REMAINING LINKS */}
-            {links
-              .filter((link) => link.name !== "Home")
-              .map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`
-                    text-[15px]
-                    transition-all duration-300
-                    hover:text-[#B08D6D]
-                    ${
-                      location.pathname === link.path
-                        ? "text-[#B08D6D]"
-                        : "text-[#5E564F]"
-                    }
-                  `}
-                >
-                  {link.name}
-                </Link>
-            ))}
+            {links.slice(3).map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              className={`
+                text-[15px]
+                transition-all duration-300
+                hover:text-[#213A5C]
+                ${
+                  location.pathname === link.path
+                    ? "text-[#213A5C]"
+                    : "text-[#5E564F]"
+                }
+              `}
+            >
+              {link.name}
+            </Link>
+          ))}
 
             {/* CONTACT BUTTON */}
             <Link
               to="/contact"
               className="
-                bg-[#B08D6D]
+                bg-[#213A5C]
                 text-white
                 px-6 py-3
                 rounded-xl
@@ -215,7 +217,7 @@ export function Navigation() {
                 transition-all duration-300
               "
             >
-              Contact Us
+              Get A Cost Estimate
             </Link>
 
           </div>
@@ -255,7 +257,7 @@ export function Navigation() {
               className="
                 block text-lg
                 text-[#5E564F]
-                hover:text-[#B08D6D]
+                hover:text-[#213A5C]
                 transition
               "
             >
@@ -274,7 +276,7 @@ export function Navigation() {
                 "
               >
 
-                <span>Our Projects</span>
+                <span>Projects</span>
 
                 <ChevronDown
                   size={18}
@@ -312,7 +314,7 @@ export function Navigation() {
                       className="
                         block
                         text-[#74695E]
-                        hover:text-[#B08D6D]
+                        hover:text-[#213A5C]
                         transition
                       "
                     >
@@ -332,7 +334,7 @@ export function Navigation() {
               className="
                 block text-lg
                 text-[#5E564F]
-                hover:text-[#B08D6D]
+                hover:text-[#213A5C]
                 transition
               "
             >
@@ -345,7 +347,7 @@ export function Navigation() {
               className="
                 block text-lg
                 text-[#5E564F]
-                hover:text-[#B08D6D]
+                hover:text-[#213A5C]
                 transition
               "
             >
@@ -359,7 +361,7 @@ export function Navigation() {
               className="
                 inline-flex items-center justify-center
                 w-full
-                bg-[#B08D6D]
+                bg-[#213A5C]
                 text-white
                 px-6 py-4
                 rounded-xl
@@ -367,7 +369,7 @@ export function Navigation() {
                 transition
               "
             >
-              Start Your Project
+              Get A Cost Estimate
             </Link>
 
           </div>
