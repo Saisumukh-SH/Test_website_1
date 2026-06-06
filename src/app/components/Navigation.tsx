@@ -11,7 +11,6 @@ export function Navigation() {
 
   const links = [
     { name: "About Us", path: "/about" },
-    { name: "Inspiration", path: "/journal" },
     { name: "Our Services", path: "/services" },
     { name: "Blog", path: "/journal" },
     { name: "Contact Us", path: "/contact" },
@@ -185,7 +184,6 @@ export function Navigation() {
               </div>
 
             </div>
-
             {links.slice(3).map((link) => (
             <Link
               key={link.path}
@@ -219,7 +217,6 @@ export function Navigation() {
             >
               Get A Cost Estimate
             </Link>
-
           </div>
 
           {/* MOBILE MENU BUTTON */}

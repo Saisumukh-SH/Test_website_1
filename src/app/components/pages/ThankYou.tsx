@@ -3,56 +3,164 @@ import { CheckCircle } from "lucide-react";
 
 export function ThankYou() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-neutral-950 text-white px-6 overflow-hidden">
+    <div
+      className="
+        min-h-screen
+        flex
+        items-center
+        justify-center
+        bg-[#F8F5F0]
+        px-6
+        py-24
+      "
+    >
 
-      {/* Background Glow */}
-      <div className="absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-white/10 blur-[120px] rounded-full"></div>
-      <div className="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-white/10 blur-[120px] rounded-full"></div>
+      {/* CONTENT CARD */}
+      <div
+        className="
+          max-w-2xl
+          w-full
+          bg-white
+          border border-[#D8CEC2]
+          rounded-[32px]
+          p-12
+          shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+          text-center
+        "
+      >
 
-      {/* Content Card */}
-      <div className="relative max-w-lg text-center bg-neutral-900 p-12 rounded-2xl border border-neutral-800 shadow-2xl backdrop-blur">
+        {/* ICON */}
+        <div className="flex justify-center mb-8">
 
-        {/* Animated Check Icon */}
-        <div className="flex justify-center mb-6">
           <CheckCircle
-            size={70}
-            className="text-green-400 animate-[bounce_1.5s_ease-in-out_infinite]"
+            size={72}
+            className="text-[#213A5C]"
           />
+
         </div>
 
-        <h1 className="text-4xl font-semibold mb-4 tracking-tight">
-          Thank You!
+        {/* TITLE */}
+        <h1
+          className="
+            text-5xl
+            md:text-6xl
+            font-semibold
+            leading-tight
+            mb-6
+            text-[#2B2B2B]
+          "
+        >
+          Thank You For
+
+          <span className="block text-[#213A5C]">
+            Your Enquiry
+          </span>
+
         </h1>
 
-        <p className="text-neutral-400 mb-10 text-lg">
-          Your journal request has been received.  
-          Our team will contact you within <span className="text-white">24 hours</span>.
+        {/* DESCRIPTION */}
+        <p
+          className="
+            text-[#5E564F]
+            text-lg
+            leading-relaxed
+            max-w-xl
+            mx-auto
+            mb-10
+          "
+        >
+          We've received your project details and a member
+          of our team will be in touch shortly to discuss
+          your renovation goals, budget and timeline.
         </p>
 
-        {/* Buttons */}
-        <div className="flex justify-center gap-4 flex-wrap">
+        {/* WHAT HAPPENS NEXT */}
+        <div
+          className="
+            bg-[#F8F5F0]
+            border border-[#D8CEC2]
+            rounded-[24px]
+            p-8
+            mb-10
+            text-left
+          "
+        >
+
+          <p
+            className="
+              text-xs
+              uppercase
+              tracking-[0.25em]
+              text-[#74695E]
+              mb-5
+            "
+          >
+            What Happens Next
+          </p>
+
+          <div
+            className="
+              space-y-4
+              text-[#5E564F]
+            "
+          >
+
+            <p>✓ We review your enquiry</p>
+
+            <p>✓ A team member contacts you</p>
+
+            <p>✓ We discuss project requirements</p>
+
+            <p>✓ We prepare your consultation</p>
+
+          </div>
+
+        </div>
+
+        {/* BUTTONS */}
+        <div
+          className="
+            flex
+            flex-wrap
+            justify-center
+            gap-4
+          "
+        >
 
           <Link
             to="/"
-            className="bg-white text-black px-8 py-4 rounded-xl hover:scale-[1.03] transition"
+            className="
+              bg-[#213A5C]
+              text-white
+              px-8
+              py-4
+              rounded-xl
+              hover:opacity-90
+              transition
+            "
           >
-            Back to Home
+            Return Home
           </Link>
 
           <Link
             to="/gallery"
-            className="border border-neutral-700 px-8 py-4 rounded-xl hover:border-white hover:text-white transition"
+            className="
+              border border-[#D8CEC2]
+              text-[#213A5C]
+              px-8
+              py-4
+              rounded-xl
+              hover:bg-[#213A5C]
+              hover:text-white
+              transition
+            "
           >
-            View Our Work
+            Explore Projects
           </Link>
 
         </div>
 
       </div>
-
-      {/* Floating decoration dots */}
-      <div className="absolute top-20 left-20 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-24 right-24 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
 
     </div>
   );

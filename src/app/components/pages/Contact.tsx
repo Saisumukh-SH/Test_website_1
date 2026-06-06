@@ -3,16 +3,21 @@ import { ArrowRight, Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp } from "../lib/motion";
 import { Footer } from "../Footer";
+import { useNavigate } from "react-router-dom";
 
 export function Contact() {
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    projectType: "",
-    message: "",
-  });
+const navigate = useNavigate();
+
+const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  projectType: "",
+  budgetRange: "",
+  timeline: "",
+  message: "",
+});
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -28,7 +33,7 @@ export function Contact() {
 
     console.log(formData);
 
-    alert("Consultation request submitted!");
+    navigate("/thank-you");
   };
 
   return (
@@ -53,9 +58,9 @@ export function Contact() {
             </h1>
 
             <p className="text-[#5E564F] text-lg leading-relaxed max-w-2xl">
-              We collaborate with homeowners across Melbourne to create
-              timeless contemporary renovations inspired by architecture,
-              craftsmanship and modern Australian living.
+              Tell us about your renovation goals and we'll prepare
+              a tailored consultation and cost estimate designed
+              around your vision, budget and lifestyle.
             </p>
 
           </div>
@@ -108,7 +113,7 @@ export function Contact() {
                     flex items-center justify-center
                     shadow-[0_10px_30px_rgba(0,0,0,0.04)]
                   ">
-                    <Mail size={22} className="text-[#B08D6D]" />
+                    <Mail size={22} className="text-[#213A5C]" />
                   </div>
 
                   <div>
@@ -134,7 +139,7 @@ export function Contact() {
                     flex items-center justify-center
                     shadow-[0_10px_30px_rgba(0,0,0,0.04)]
                   ">
-                    <Phone size={22} className="text-[#B08D6D]" />
+                    <Phone size={22} className="text-[#213A5C]" />
                   </div>
 
                   <div>
@@ -160,7 +165,7 @@ export function Contact() {
                     flex items-center justify-center
                     shadow-[0_10px_30px_rgba(0,0,0,0.04)]
                   ">
-                    <MapPin size={22} className="text-[#B08D6D]" />
+                    <MapPin size={22} className="text-[#213A5C]" />
                   </div>
 
                   <div>
@@ -186,7 +191,7 @@ export function Contact() {
                     flex items-center justify-center
                     shadow-[0_10px_30px_rgba(0,0,0,0.04)]
                   ">
-                    <Instagram size={22} className="text-[#B08D6D]" />
+                    <Instagram size={22} className="text-[#213A5C]" />
                   </div>
 
                   <div>
@@ -207,7 +212,7 @@ export function Contact() {
 
               {/* RESPONSE TIME */}
               <div className="
-                bg-[#EFE7DD]
+                bg-[#F5F1EB]
                 border border-[#DDD3C7]
                 rounded-[28px]
                 p-8
@@ -218,12 +223,13 @@ export function Contact() {
                 </p>
 
                 <h3 className="text-3xl font-semibold mb-4">
-                  Typically Within 24 Hours
+                  Free Consultation & Cost Estimate
                 </h3>
 
                 <p className="text-[#5E564F] leading-relaxed">
-                  We review every enquiry carefully to understand your
-                  renovation goals and project vision.
+                  Every enquiry receives a personalised review.
+                  We'll discuss your goals, budget and timeline
+                  before preparing recommendations.
                 </p>
 
               </div>
@@ -281,7 +287,7 @@ export function Contact() {
                       bg-[#F8F5F0]
                       px-5 py-4
                       outline-none
-                      focus:border-[#B08D6D]
+                      focus:border-[#213A5C]
                       transition
                     "
                   />
@@ -308,7 +314,7 @@ export function Contact() {
                       bg-[#F8F5F0]
                       px-5 py-4
                       outline-none
-                      focus:border-[#B08D6D]
+                      focus:border-[#213A5C]
                       transition
                     "
                   />
@@ -334,7 +340,7 @@ export function Contact() {
                       bg-[#F8F5F0]
                       px-5 py-4
                       outline-none
-                      focus:border-[#B08D6D]
+                      focus:border-[#213A5C]
                       transition
                     "
                   />
@@ -359,7 +365,7 @@ export function Contact() {
                       bg-[#F8F5F0]
                       px-5 py-4
                       outline-none
-                      focus:border-[#B08D6D]
+                      focus:border-[#213A5C]
                       transition
                     "
                   >
@@ -370,6 +376,69 @@ export function Contact() {
                     <option value="Living">Living Space</option>
                     <option value="Full">Full Renovation</option>
 
+                  </select>
+
+                </div>
+
+                {/* BUDGET RANGE */}
+                <div>
+
+                  <label className="block text-sm mb-3 text-[#5E564F]">
+                    Budget Range
+                  </label>
+
+                  <select
+                    name="budgetRange"
+                    value={formData.budgetRange}
+                    onChange={handleChange}
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-[#DDD3C7]
+                      bg-[#F8F5F0]
+                      px-5 py-4
+                      outline-none
+                      focus:border-[#213A5C]
+                      transition
+                    "
+                  >
+                    <option value="">Select Budget Range</option>
+                    <option value="Under25k">Under $25,000</option>
+                    <option value="25k-50k">$25,000 - $50,000</option>
+                    <option value="50k-100k">$50,000 - $100,000</option>
+                    <option value="100k+">$100,000+</option>
+                  </select>
+
+                </div>
+
+                {/* TIMELINE */}
+                <div>
+
+                  <label className="block text-sm mb-3 text-[#5E564F]">
+                    Desired Timeline
+                  </label>
+
+                  <select
+                    name="timeline"
+                    value={formData.timeline}
+                    onChange={handleChange}
+                    className="
+                      w-full
+                      rounded-2xl
+                      border border-[#DDD3C7]
+                      bg-[#F8F5F0]
+                      px-5 py-4
+                      outline-none
+                      focus:border-[#213A5C]
+                      transition
+                    "
+                  >
+                    <option value="">Select Timeline</option>
+                    <option value="Immediately">Immediately</option>
+                    <option value="1-3 Months">1-3 Months</option>
+                    <option value="3-6 Months">3-6 Months</option>
+                    <option value="6+ Months">6+ Months</option>
+                    <option value="Exploring">Just Exploring</option>
                   </select>
 
                 </div>
@@ -393,7 +462,7 @@ export function Contact() {
                       bg-[#F8F5F0]
                       px-5 py-4
                       outline-none
-                      focus:border-[#B08D6D]
+                      focus:border-[#213A5C]
                       transition
                       resize-none
                     "
@@ -414,7 +483,7 @@ export function Contact() {
                     transition
                   "
                 >
-                  Submit Enquiry
+                  Get My Cost Estimate
                   <ArrowRight size={18} />
                 </button>
 
@@ -434,7 +503,7 @@ export function Contact() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="py-32 border-t border-[#DDD3C7] bg-[#EFE7DD]"
+        className="py-32 border-t border-[#DDD3C7] bg-[#F5F1EB]"
       >
 
   <div className="max-w-5xl mx-auto px-6">
@@ -525,7 +594,7 @@ export function Contact() {
                 w-10 h-10 rounded-full
                 border border-[#DDD3C7]
                 flex items-center justify-center
-                text-[#B08D6D]
+                text-[#213A5C]
                 transition-transform duration-300
                 group-open:rotate-45
               "
@@ -552,7 +621,7 @@ export function Contact() {
 
   </div>
 
-</motion.section>
+      </motion.section>
 
     </div>
   );
