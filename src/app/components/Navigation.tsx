@@ -17,6 +17,11 @@ export function Navigation() {
   ];
 
   const projectLinks = [
+
+    {
+      name: "All Projects",
+      path: "/gallery",
+    },
     {
       name: "Kitchen Renovations",
       path: "/gallery?category=kitchen",
@@ -184,6 +189,8 @@ export function Navigation() {
               </div>
 
             </div>
+
+
             {links.slice(3).map((link) => (
             <Link
               key={link.path}
