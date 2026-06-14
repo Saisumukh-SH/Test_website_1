@@ -57,50 +57,58 @@ export function Home() {
     number: "01",
     title: "Discover",
     description:
-      "We get to know you, your lifestyle, your space, and what matters most."
+      "We get to know you, your lifestyle, your space, and what matters most.",
+    image: "/images/01 discover.webp",
   },
   {
     number: "02",
     title: "Explore",
     description:
-      "We assess your existing space and identify opportunities to improve functionality."
+      "We assess your existing space and identify opportunities to improve functionality.",
+    image: "/images/02 explore.webp",
   },
   {
     number: "03",
     title: "Curate",
     description:
-      "Through moodboards, material palettes, and design inspiration we develop a clear direction."
+      "Through moodboards, material palettes, and design inspiration we develop a clear direction.",
+    image: "/images/03 curate.webp",
   },
   {
     number: "04",
     title: "Design",
     description:
-      "We create bespoke layouts and space planning solutions tailored to your home."
+      "We create bespoke layouts and space planning solutions tailored to your home.",
+    image: "/images/04 design.webp",
   },
   {
     number: "05",
     title: "Visualise",
     description:
-      "Experience your future kitchen through realistic 3D renders before construction."
+      "Experience your future kitchen through realistic 3D renders before construction.",
+    image: "/images/05 visualise.webp",
   },
   {
     number: "06",
     title: "Plan",
     description:
-      "Detailed drawings, specifications, costing, and project planning are prepared."
+      "Detailed drawings, specifications, costing, and project planning are prepared.",
+    image: "/images/06 plan.webp",
   },
   {
     number: "07",
     title: "Create",
     description:
-      "Our team coordinates trades, manages construction, and oversees quality."
+      "Our team coordinates trades, manages construction, and oversees quality.",
+    image: "/images/07 create.webp",
   },
   {
     number: "08",
     title: "Enjoy",
     description:
-      "The final reveal. Your new kitchen becomes the heart of your home."
-  }
+      "The final reveal. Your new kitchen becomes the heart of your home.",
+    image: "/images/08 enjoy.webp",
+  },
 ];
 
   const whyChooseUs = [
@@ -382,6 +390,158 @@ const companyDifference = [
 
       </section>
 
+      {/* THE JOURNEY HOME */}
+      <section
+        className="
+          py-28
+          bg-[#F5F1EB]
+          border-y border-[#D8CEC2]
+        "
+      >
+
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* HEADER */}
+
+          <div className="max-w-4xl mb-20">
+
+            <p
+              className="
+                text-xs uppercase
+                tracking-[0.3em]
+                text-[#74695E]
+                mb-4
+              "
+            >
+              The Journey Home
+            </p>
+
+            <h2
+              className="
+                editorial-heading
+                text-4xl
+                md:text-5xl
+                leading-tight
+                mb-6
+              "
+            >
+              From Vision To
+              <span className="block text-[#5E564F]">
+                Reality
+              </span>
+            </h2>
+
+            <p
+              className="
+                text-[#5E564F]
+                text-lg
+                leading-relaxed
+                max-w-3xl
+              "
+            >
+              A great kitchen is more than a place to cook.
+              It is where life happens. Our process ensures
+              every detail is thoughtfully planned and executed.
+            </p>
+
+          </div>
+
+          {/* FEATURE IMAGE */}
+
+          <img
+            src="/images/journey4.webp"
+            alt="Journey"
+            className="
+              w-full
+              h-full
+              object-cover
+              rounded-[24px]
+              mb-16
+            "
+          />
+
+      {/* PROCESS GRID */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {journeySteps.map((step) => (
+          <div
+            key={step.number}
+            className="
+              bg-white
+              border border-[#D8CEC2]
+              overflow-hidden
+              group
+            "
+          >
+            {/* Image */}
+            <div className="relative h-56 overflow-hidden">
+              <img
+                src={step.image}
+                alt={step.title}
+                className="
+                  w-full
+                  h-full
+                  object-cover
+                  transition-transform
+                  duration-700
+                  group-hover:scale-105
+                "
+              />
+            </div>
+
+            {/* Content */}
+            <div className="p-8 relative overflow-hidden">
+
+              {/* Watermark Number */}
+              <div
+                className="
+                  absolute
+                  -top-2
+                  right-4
+                  text-[90px]
+                  font-bold
+                  text-[#213A5C]/25
+                  leading-none
+                  pointer-events-none
+                  select-none
+                "
+              >
+                {step.number}
+              </div>
+
+              <h3
+                className="
+                  text-2xl
+                  font-semibold
+                  mb-4
+                  relative
+                  z-10
+                "
+              >
+                {step.title}
+              </h3>
+
+              <p
+                className="
+                  text-[#5E564F]
+                  leading-relaxed
+                  relative
+                  z-10
+                "
+              >
+                {step.description}
+              </p>
+
+            </div>
+
+
+          </div>
+        ))}
+      </div>
+
+        </div>
+
+      </section>
+
       {/* COMPANY DIFFERENCE */}
       <section className="py-24">
 
@@ -493,131 +653,6 @@ const companyDifference = [
                   </p>
 
                 </div>
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* THE JOURNEY HOME */}
-      <section
-        className="
-          py-28
-          bg-[#F5F1EB]
-          border-y border-[#D8CEC2]
-        "
-      >
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          {/* HEADER */}
-
-          <div className="max-w-4xl mb-20">
-
-            <p
-              className="
-                text-xs uppercase
-                tracking-[0.3em]
-                text-[#74695E]
-                mb-4
-              "
-            >
-              The Journey Home
-            </p>
-
-            <h2
-              className="
-                editorial-heading
-                text-4xl
-                md:text-5xl
-                leading-tight
-                mb-6
-              "
-            >
-              From Vision To
-              <span className="block text-[#5E564F]">
-                Reality
-              </span>
-            </h2>
-
-            <p
-              className="
-                text-[#5E564F]
-                text-lg
-                leading-relaxed
-                max-w-3xl
-              "
-            >
-              A great kitchen is more than a place to cook.
-              It is where life happens. Our process ensures
-              every detail is thoughtfully planned and executed.
-            </p>
-
-          </div>
-
-          {/* FEATURE IMAGE */}
-
-          <img
-            src="/images/inside_indust_1.jpg"
-            alt="Journey"
-            className="
-              w-full
-              h-[500px]
-              object-cover
-              rounded-[24px]
-              mb-16
-            "
-          />
-
-          {/* PROCESS GRID */}
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            {journeySteps.map((step) => (
-
-              <div
-                key={step.number}
-                className="
-                  bg-white
-                  border border-[#D8CEC2]
-                  p-8
-                "
-              >
-
-                <div
-                  className="
-                    text-5xl
-                    font-semibold
-                    text-[#213A5C]
-                    mb-4
-                  "
-                >
-                  {step.number}
-                </div>
-
-                <h3
-                  className="
-                    text-2xl
-                    font-semibold
-                    mb-4
-                  "
-                >
-                  {step.title}
-                </h3>
-
-                <p
-                  className="
-                    text-[#5E564F]
-                    leading-relaxed
-                  "
-                >
-                  {step.description}
-                </p>
 
               </div>
 
