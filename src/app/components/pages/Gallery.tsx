@@ -40,407 +40,407 @@ export function Gallery() {
   }, [searchParams]);
 
   const projects = [
-{
-  id: 1,
-  title: "Japandi Material",
-  category: "Kitchen",
-  location: "Melbourne, Victoria",
-  image: "/images/japandi material.webp",
+    {
+      id: 1,
+      title: "Japandi Material",
+      category: "Kitchen",
+      location: "Melbourne, Victoria",
+      image: "/images/japandi material.webp",
 
-  description:
-    "A thoughtfully curated Japandi kitchen that combines the warmth of Scandinavian design with the simplicity and craftsmanship of Japanese interiors. The project focused on creating a calm, functional and timeless space through natural materials, clean lines and considered detailing.",
-
-  storyboard: {
-    moodboard: "/images/projects/japandi_material/moodboard.webp",
-    sketch: "/images/projects/japandi_material/sketch.webp",
-    floorplan: "/images/projects/japandi_material/floorplan.webp",
-    render: "/images/projects/japandi_material/render.webp",
-  },
-
-  clientGoals: [
-    {
-      goal: "Create a Calm Living Environment",
-      outcome:
-        "The design embraces simplicity, natural textures and a restrained colour palette to promote a sense of tranquillity."
-    },
-    {
-      goal: "Maximise Functionality",
-      outcome:
-        "Storage, workflow and usability were carefully considered to support everyday living."
-    },
-    {
-      goal: "Introduce Natural Materials",
-      outcome:
-        "Timber, stone and organic finishes create warmth and authenticity throughout the space."
-    },
-    {
-      goal: "Achieve Timeless Design",
-      outcome:
-        "A minimalist approach ensures the kitchen remains elegant and relevant for years to come."
-    }
-  ],
-
-  designDecisions: [
-    {
-      title: "Natural Oak Joinery",
       description:
-        "Selected to introduce warmth, texture and a strong connection to nature."
+        "A thoughtfully curated Japandi kitchen that combines the warmth of Scandinavian design with the simplicity and craftsmanship of Japanese interiors. The project focused on creating a calm, functional and timeless space through natural materials, clean lines and considered detailing.",
+
+      storyboard: {
+        moodboard: "/images/projects/japandi_material/moodboard.webp",
+        sketch: "/images/projects/japandi_material/sketch.webp",
+        floorplan: "/images/projects/japandi_material/floorplan.webp",
+        render: "/images/projects/japandi_material/render.webp",
+      },
+
+      clientGoals: [
+        {
+          goal: "Create a Calm Living Environment",
+          outcome:
+            "The design embraces simplicity, natural textures and a restrained colour palette to promote a sense of tranquillity.",
+        },
+        {
+          goal: "Maximise Functionality",
+          outcome:
+            "Storage, workflow and usability were carefully considered to support everyday living.",
+        },
+        {
+          goal: "Introduce Natural Materials",
+          outcome:
+            "Timber, stone and organic finishes create warmth and authenticity throughout the space.",
+        },
+        {
+          goal: "Achieve Timeless Design",
+          outcome:
+            "A minimalist approach ensures the kitchen remains elegant and relevant for years to come.",
+        },
+      ],
+
+      designDecisions: [
+        {
+          title: "Natural Oak Joinery",
+          description:
+            "Selected to introduce warmth, texture and a strong connection to nature.",
+        },
+        {
+          title: "Integrated Appliances",
+          description:
+            "Concealed appliances maintain visual simplicity and support the minimalist aesthetic.",
+        },
+        {
+          title: "Stone Benchtops",
+          description:
+            "Durable natural stone adds subtle visual interest while complementing the material palette.",
+        },
+        {
+          title: "Soft Layered Lighting",
+          description:
+            "Carefully positioned lighting enhances functionality while creating a warm atmosphere.",
+        },
+      ],
+
+      result:
+        "The completed kitchen successfully balances functionality, warmth and simplicity. Through thoughtful planning and carefully selected materials, the space now embodies the principles of Japandi design while providing a highly practical environment for everyday living.",
     },
+
     {
-      title: "Integrated Appliances",
+      id: 2,
+      title: "Brighton Coastal Home",
+      category: "Bathroom",
+      location: "Brighton, Victoria",
+      image: "/images/project2.webp",
+
       description:
-        "Concealed appliances maintain visual simplicity and support the minimalist aesthetic."
+        "Inspired by Brighton's coastal character, this bathroom renovation combines natural textures, soft tones and premium finishes to create a calm retreat that feels both luxurious and timeless.",
+
+      storyboard: {
+        moodboard: "/images/projects/brighton/moodboard.webp",
+        sketch: "/images/projects/brighton/sketch.webp",
+        floorplan: "/images/projects/brighton/floorplan.webp",
+        render: "/images/projects/brighton/render.webp",
+      },
+
+      clientGoals: [
+        {
+          goal: "Create a Spa Experience",
+          outcome:
+            "The space was designed to provide a calming, resort-style atmosphere for everyday use.",
+        },
+        {
+          goal: "Maximise Storage",
+          outcome:
+            "Custom vanity cabinetry and concealed storage solutions reduced visual clutter.",
+        },
+        {
+          goal: "Improve Functionality",
+          outcome:
+            "The new layout improved circulation and made daily routines more efficient.",
+        },
+        {
+          goal: "Introduce Natural Elements",
+          outcome:
+            "Organic textures and coastal-inspired materials created warmth and character.",
+        },
+      ],
+
+      designDecisions: [
+        {
+          title: "Natural Stone Finishes",
+          description:
+            "Selected to add texture, durability and a timeless coastal aesthetic.",
+        },
+        {
+          title: "Floating Timber Vanity",
+          description:
+            "Creates visual openness while providing generous storage.",
+        },
+        {
+          title: "Frameless Shower Screen",
+          description:
+            "Maintains clean sightlines and enhances the sense of space.",
+        },
+        {
+          title: "Layered Lighting",
+          description:
+            "A combination of task and ambient lighting creates both functionality and atmosphere.",
+        },
+      ],
+
+      result:
+        "The completed renovation transformed an outdated bathroom into a sophisticated coastal sanctuary that balances luxury, practicality and timeless design.",
     },
+
     {
-      title: "Stone Benchtops",
+      id: 3,
+      title: "Hawthorn Interior",
+      category: "Living",
+      location: "Hawthorn, Victoria",
+      image: "/images/project3.webp",
+
       description:
-        "Durable natural stone adds subtle visual interest while complementing the material palette."
+        "A refined living space transformation designed to bring warmth, sophistication and functionality into the heart of the home. The design balances contemporary elegance with everyday comfort through carefully curated materials and bespoke detailing.",
+
+      storyboard: {
+        moodboard: "/images/projects/hawthorn/moodboard.webp",
+        sketch: "/images/projects/hawthorn/sketch.webp",
+        floorplan: "/images/projects/hawthorn/floorplan.webp",
+        render: "/images/projects/hawthorn/render.webp",
+      },
+
+      clientGoals: [
+        {
+          goal: "Create a More Inviting Space",
+          outcome:
+            "The layout was reconfigured to improve comfort and encourage social interaction.",
+        },
+        {
+          goal: "Increase Natural Light",
+          outcome:
+            "Lighter finishes and strategic furniture placement enhanced brightness throughout the room.",
+        },
+        {
+          goal: "Improve Functionality",
+          outcome:
+            "Custom storage and a more considered floor plan improved daily usability.",
+        },
+        {
+          goal: "Achieve a Timeless Look",
+          outcome:
+            "A restrained palette and premium materials ensure the design remains relevant for years to come.",
+        },
+      ],
+
+      designDecisions: [
+        {
+          title: "Custom Feature Joinery",
+          description:
+            "Designed to provide practical storage while creating a striking architectural focal point.",
+        },
+        {
+          title: "Layered Material Palette",
+          description:
+            "Natural timber, stone and soft textiles introduce warmth and depth.",
+        },
+        {
+          title: "Open Living Arrangement",
+          description:
+            "Furniture layouts were carefully planned to improve flow and flexibility.",
+        },
+        {
+          title: "Architectural Lighting",
+          description:
+            "A combination of ambient and feature lighting enhances mood and highlights key design elements.",
+        },
+      ],
+
+      result:
+        "The completed living space feels sophisticated, welcoming and effortlessly functional, creating an environment that supports both relaxation and entertaining.",
     },
+
     {
-      title: "Soft Layered Lighting",
+      id: 4,
+      title: "Modern Family Extension",
+      category: "Full Renovation",
+      location: "Kew, Victoria",
+      image: "/images/project4.webp",
+
       description:
-        "Carefully positioned lighting enhances functionality while creating a warm atmosphere."
-    }
-  ],
+        "A thoughtfully designed home extension created to accommodate a growing family while enhancing the connection between indoor and outdoor living. The project focused on increasing space, functionality and natural light without compromising the home's architectural character.",
 
-  result:
-    "The completed kitchen successfully balances functionality, warmth and simplicity. Through thoughtful planning and carefully selected materials, the space now embodies the principles of Japandi design while providing a highly practical environment for everyday living."
-},
+      storyboard: {
+        moodboard: "/images/projects/kew/moodboard.webp",
+        sketch: "/images/projects/kew/sketch.webp",
+        floorplan: "/images/projects/kew/floorplan.webp",
+        render: "/images/projects/kew/render.webp",
+      },
 
-    {
-  id: 2,
-  title: "Brighton Coastal Home",
-  category: "Bathroom",
-  location: "Brighton, Victoria",
-  image: "/images/project2.webp",
+      clientGoals: [
+        {
+          goal: "Create Additional Living Space",
+          outcome:
+            "The extension introduced generous open-plan areas tailored to modern family life.",
+        },
+        {
+          goal: "Improve Indoor–Outdoor Connection",
+          outcome:
+            "Large openings and carefully planned sightlines seamlessly connected the home to the backyard.",
+        },
+        {
+          goal: "Increase Natural Light",
+          outcome:
+            "Skylights, glazing and spatial planning transformed previously dark areas into bright living spaces.",
+        },
+        {
+          goal: "Future-Proof the Home",
+          outcome:
+            "Flexible spaces were designed to adapt to the family's changing needs over time.",
+        },
+      ],
 
-  description:
-    "Inspired by Brighton's coastal character, this bathroom renovation combines natural textures, soft tones and premium finishes to create a calm retreat that feels both luxurious and timeless.",
+      designDecisions: [
+        {
+          title: "Open-Plan Living",
+          description:
+            "The layout was designed to improve family interaction while creating a sense of openness.",
+        },
+        {
+          title: "Architectural Glazing",
+          description:
+            "Large windows and sliding doors maximise daylight and strengthen the relationship with the outdoors.",
+        },
+        {
+          title: "Material Continuity",
+          description:
+            "Consistent finishes create a seamless transition between the original home and the extension.",
+        },
+        {
+          title: "Flexible Family Spaces",
+          description:
+            "Rooms were designed to support multiple functions as family requirements evolve.",
+        },
+      ],
 
-  storyboard: {
-    moodboard: "/images/projects/brighton/moodboard.webp",
-    sketch: "/images/projects/brighton/sketch.webp",
-    floorplan: "/images/projects/brighton/floorplan.webp",
-    render: "/images/projects/brighton/render.webp",
-  },
-
-  clientGoals: [
-    {
-      goal: "Create a Spa Experience",
-      outcome:
-        "The space was designed to provide a calming, resort-style atmosphere for everyday use."
+      result:
+        "The completed extension transformed the home into a bright, spacious and highly functional environment that supports modern family living while respecting the character of the original residence.",
     },
-    {
-      goal: "Maximise Storage",
-      outcome:
-        "Custom vanity cabinetry and concealed storage solutions reduced visual clutter."
-    },
-    {
-      goal: "Improve Functionality",
-      outcome:
-        "The new layout improved circulation and made daily routines more efficient."
-    },
-    {
-      goal: "Introduce Natural Elements",
-      outcome:
-        "Organic textures and coastal-inspired materials created warmth and character."
-    }
-  ],
 
-  designDecisions: [
     {
-      title: "Natural Stone Finishes",
+      id: 5,
+      title: "Minimalist Kitchen Studio",
+      category: "Kitchen",
+      location: "South Yarra, Victoria",
+      image: "/images/kitchen2.webp",
+
       description:
-        "Selected to add texture, durability and a timeless coastal aesthetic."
+        "A sophisticated kitchen renovation centred around simplicity, functionality and timeless design. Clean lines, integrated storage and a restrained material palette create a space that feels calm, refined and effortlessly elegant.",
+
+      storyboard: {
+        moodboard: "/images/projects/south-yarra/moodboard.webp",
+        sketch: "/images/projects/south-yarra/sketch.webp",
+        floorplan: "/images/projects/south-yarra/floorplan.webp",
+        render: "/images/projects/south-yarra/render.webp",
+      },
+
+      clientGoals: [
+        {
+          goal: "Achieve a Minimal Aesthetic",
+          outcome:
+            "Every design decision focused on reducing visual clutter while maintaining practicality.",
+        },
+        {
+          goal: "Maximise Storage",
+          outcome:
+            "Integrated cabinetry and hidden storage solutions created a highly organised kitchen.",
+        },
+        {
+          goal: "Improve Workflow",
+          outcome:
+            "The layout was optimised to support efficient cooking and entertaining.",
+        },
+        {
+          goal: "Create a Timeless Space",
+          outcome:
+            "A neutral palette and quality materials ensure long-term appeal.",
+        },
+      ],
+
+      designDecisions: [
+        {
+          title: "Handleless Cabinetry",
+          description:
+            "Provides a clean, uninterrupted appearance that reinforces the minimalist aesthetic.",
+        },
+        {
+          title: "Integrated Appliances",
+          description:
+            "Appliances were concealed within joinery to maintain visual consistency.",
+        },
+        {
+          title: "Monolithic Island",
+          description:
+            "A sculptural island became the centrepiece of the space while improving functionality.",
+        },
+        {
+          title: "Soft Neutral Palette",
+          description:
+            "Subtle tones and textures create a calm and welcoming environment.",
+        },
+      ],
+
+      result:
+        "The completed kitchen delivers a refined balance of beauty and practicality, creating a timeless space that supports both everyday living and entertaining.",
     },
+
     {
-      title: "Floating Timber Vanity",
+      id: 6,
+      title: "Architectural Living Space",
+      category: "Living",
+      location: "Camberwell, Victoria",
+      image: "/images/project6.webp",
+
       description:
-        "Creates visual openness while providing generous storage."
-    },
-    {
-      title: "Frameless Shower Screen",
-      description:
-        "Maintains clean sightlines and enhances the sense of space."
-    },
-    {
-      title: "Layered Lighting",
-      description:
-        "A combination of task and ambient lighting creates both functionality and atmosphere."
-    }
-  ],
+        "A contemporary living space designed around architectural simplicity, natural materials and purposeful functionality. The project focused on creating a refined environment where form and function work seamlessly together, resulting in a space that feels both sophisticated and inviting.",
 
-  result:
-    "The completed renovation transformed an outdated bathroom into a sophisticated coastal sanctuary that balances luxury, practicality and timeless design."
-},
+      storyboard: {
+        moodboard: "/images/projects/camberwell/moodboard.webp",
+        sketch: "/images/projects/camberwell/sketch.webp",
+        floorplan: "/images/projects/camberwell/floorplan.webp",
+        render: "/images/projects/camberwell/render.webp",
+      },
 
-    {
-  id: 3,
-  title: "Hawthorn Interior",
-  category: "Living",
-  location: "Hawthorn, Victoria",
-  image: "/images/project3.webp",
+      clientGoals: [
+        {
+          goal: "Create a Statement Living Area",
+          outcome:
+            "The design introduced strong architectural features that became focal points within the home.",
+        },
+        {
+          goal: "Improve Spatial Flow",
+          outcome:
+            "Furniture placement and circulation paths were carefully planned to enhance movement and functionality.",
+        },
+        {
+          goal: "Bring Warmth to Modern Design",
+          outcome:
+            "Natural materials and layered textures softened the contemporary aesthetic.",
+        },
+        {
+          goal: "Enhance Entertaining",
+          outcome:
+            "The layout encourages connection and interaction while maintaining comfort and flexibility.",
+        },
+      ],
 
-  description:
-    "A refined living space transformation designed to bring warmth, sophistication and functionality into the heart of the home. The design balances contemporary elegance with everyday comfort through carefully curated materials and bespoke detailing.",
+      designDecisions: [
+        {
+          title: "Architectural Feature Wall",
+          description:
+            "A bespoke feature element anchors the room and introduces visual depth.",
+        },
+        {
+          title: "Natural Material Palette",
+          description:
+            "Timber, stone and textured fabrics create warmth and timeless appeal.",
+        },
+        {
+          title: "Layered Lighting Strategy",
+          description:
+            "Multiple lighting sources provide flexibility while enhancing atmosphere.",
+        },
+        {
+          title: "Open Yet Defined Zones",
+          description:
+            "The layout balances openness with clearly defined functional areas.",
+        },
+      ],
 
-  storyboard: {
-    moodboard: "/images/projects/hawthorn/moodboard.webp",
-    sketch: "/images/projects/hawthorn/sketch.webp",
-    floorplan: "/images/projects/hawthorn/floorplan.webp",
-    render: "/images/projects/hawthorn/render.webp",
-  },
-
-  clientGoals: [
-    {
-      goal: "Create a More Inviting Space",
-      outcome:
-        "The layout was reconfigured to improve comfort and encourage social interaction."
+      result:
+        "The completed living space delivers a harmonious balance of architecture, comfort and functionality. Through thoughtful planning and refined material selections, the home now feels more connected, inviting and tailored to modern living.",
     },
-    {
-      goal: "Increase Natural Light",
-      outcome:
-        "Lighter finishes and strategic furniture placement enhanced brightness throughout the room."
-    },
-    {
-      goal: "Improve Functionality",
-      outcome:
-        "Custom storage and a more considered floor plan improved daily usability."
-    },
-    {
-      goal: "Achieve a Timeless Look",
-      outcome:
-        "A restrained palette and premium materials ensure the design remains relevant for years to come."
-    }
-  ],
-
-  designDecisions: [
-    {
-      title: "Custom Feature Joinery",
-      description:
-        "Designed to provide practical storage while creating a striking architectural focal point."
-    },
-    {
-      title: "Layered Material Palette",
-      description:
-        "Natural timber, stone and soft textiles introduce warmth and depth."
-    },
-    {
-      title: "Open Living Arrangement",
-      description:
-        "Furniture layouts were carefully planned to improve flow and flexibility."
-    },
-    {
-      title: "Architectural Lighting",
-      description:
-        "A combination of ambient and feature lighting enhances mood and highlights key design elements."
-    }
-  ],
-
-  result:
-    "The completed living space feels sophisticated, welcoming and effortlessly functional, creating an environment that supports both relaxation and entertaining."
-},
-
-    {
-  id: 4,
-  title: "Modern Family Extension",
-  category: "Full Renovation",
-  location: "Kew, Victoria",
-  image: "/images/project4.webp",
-
-  description:
-    "A thoughtfully designed home extension created to accommodate a growing family while enhancing the connection between indoor and outdoor living. The project focused on increasing space, functionality and natural light without compromising the home's architectural character.",
-
-  storyboard: {
-    moodboard: "/images/projects/kew/moodboard.webp",
-    sketch: "/images/projects/kew/sketch.webp",
-    floorplan: "/images/projects/kew/floorplan.webp",
-    render: "/images/projects/kew/render.webp",
-  },
-
-  clientGoals: [
-    {
-      goal: "Create Additional Living Space",
-      outcome:
-        "The extension introduced generous open-plan areas tailored to modern family life."
-    },
-    {
-      goal: "Improve Indoor–Outdoor Connection",
-      outcome:
-        "Large openings and carefully planned sightlines seamlessly connected the home to the backyard."
-    },
-    {
-      goal: "Increase Natural Light",
-      outcome:
-        "Skylights, glazing and spatial planning transformed previously dark areas into bright living spaces."
-    },
-    {
-      goal: "Future-Proof the Home",
-      outcome:
-        "Flexible spaces were designed to adapt to the family's changing needs over time."
-    }
-  ],
-
-  designDecisions: [
-    {
-      title: "Open-Plan Living",
-      description:
-        "The layout was designed to improve family interaction while creating a sense of openness."
-    },
-    {
-      title: "Architectural Glazing",
-      description:
-        "Large windows and sliding doors maximise daylight and strengthen the relationship with the outdoors."
-    },
-    {
-      title: "Material Continuity",
-      description:
-        "Consistent finishes create a seamless transition between the original home and the extension."
-    },
-    {
-      title: "Flexible Family Spaces",
-      description:
-        "Rooms were designed to support multiple functions as family requirements evolve."
-    }
-  ],
-
-  result:
-    "The completed extension transformed the home into a bright, spacious and highly functional environment that supports modern family living while respecting the character of the original residence."
-},
-
-    {
-  id: 5,
-  title: "Minimalist Kitchen Studio",
-  category: "Kitchen",
-  location: "South Yarra, Victoria",
-  image: "/images/kitchen2.webp",
-
-  description:
-    "A sophisticated kitchen renovation centred around simplicity, functionality and timeless design. Clean lines, integrated storage and a restrained material palette create a space that feels calm, refined and effortlessly elegant.",
-
-  storyboard: {
-    moodboard: "/images/projects/south-yarra/moodboard.webp",
-    sketch: "/images/projects/south-yarra/sketch.webp",
-    floorplan: "/images/projects/south-yarra/floorplan.webp",
-    render: "/images/projects/south-yarra/render.webp",
-  },
-
-  clientGoals: [
-    {
-      goal: "Achieve a Minimal Aesthetic",
-      outcome:
-        "Every design decision focused on reducing visual clutter while maintaining practicality."
-    },
-    {
-      goal: "Maximise Storage",
-      outcome:
-        "Integrated cabinetry and hidden storage solutions created a highly organised kitchen."
-    },
-    {
-      goal: "Improve Workflow",
-      outcome:
-        "The layout was optimised to support efficient cooking and entertaining."
-    },
-    {
-      goal: "Create a Timeless Space",
-      outcome:
-        "A neutral palette and quality materials ensure long-term appeal."
-    }
-  ],
-
-  designDecisions: [
-    {
-      title: "Handleless Cabinetry",
-      description:
-        "Provides a clean, uninterrupted appearance that reinforces the minimalist aesthetic."
-    },
-    {
-      title: "Integrated Appliances",
-      description:
-        "Appliances were concealed within joinery to maintain visual consistency."
-    },
-    {
-      title: "Monolithic Island",
-      description:
-        "A sculptural island became the centrepiece of the space while improving functionality."
-    },
-    {
-      title: "Soft Neutral Palette",
-      description:
-        "Subtle tones and textures create a calm and welcoming environment."
-    }
-  ],
-
-  result:
-    "The completed kitchen delivers a refined balance of beauty and practicality, creating a timeless space that supports both everyday living and entertaining."
-},
-
-    {
-  id: 6,
-  title: "Architectural Living Space",
-  category: "Living",
-  location: "Camberwell, Victoria",
-  image: "/images/project6.webp",
-
-  description:
-    "A contemporary living space designed around architectural simplicity, natural materials and purposeful functionality. The project focused on creating a refined environment where form and function work seamlessly together, resulting in a space that feels both sophisticated and inviting.",
-
-  storyboard: {
-    moodboard: "/images/projects/camberwell/moodboard.webp",
-    sketch: "/images/projects/camberwell/sketch.webp",
-    floorplan: "/images/projects/camberwell/floorplan.webp",
-    render: "/images/projects/camberwell/render.webp",
-  },
-
-  clientGoals: [
-    {
-      goal: "Create a Statement Living Area",
-      outcome:
-        "The design introduced strong architectural features that became focal points within the home."
-    },
-    {
-      goal: "Improve Spatial Flow",
-      outcome:
-        "Furniture placement and circulation paths were carefully planned to enhance movement and functionality."
-    },
-    {
-      goal: "Bring Warmth to Modern Design",
-      outcome:
-        "Natural materials and layered textures softened the contemporary aesthetic."
-    },
-    {
-      goal: "Enhance Entertaining",
-      outcome:
-        "The layout encourages connection and interaction while maintaining comfort and flexibility."
-    }
-  ],
-
-  designDecisions: [
-    {
-      title: "Architectural Feature Wall",
-      description:
-        "A bespoke feature element anchors the room and introduces visual depth."
-    },
-    {
-      title: "Natural Material Palette",
-      description:
-        "Timber, stone and textured fabrics create warmth and timeless appeal."
-    },
-    {
-      title: "Layered Lighting Strategy",
-      description:
-        "Multiple lighting sources provide flexibility while enhancing atmosphere."
-    },
-    {
-      title: "Open Yet Defined Zones",
-      description:
-        "The layout balances openness with clearly defined functional areas."
-    }
-  ],
-
-  result:
-    "The completed living space delivers a harmonious balance of architecture, comfort and functionality. Through thoughtful planning and refined material selections, the home now feels more connected, inviting and tailored to modern living."
-},
   ];
 
   const filteredProjects =
@@ -884,7 +884,7 @@ export function Gallery() {
                   {/* Main Moodboard */}
 
                   <img
-                     src={selectedProject.storyboard.moodboard}
+                    src={selectedProject.storyboard.moodboard}
                     alt="Moodboard"
                     className="
                           absolute

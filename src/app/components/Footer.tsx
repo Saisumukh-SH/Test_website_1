@@ -27,13 +27,28 @@ export function Footer() {
   return (
     <footer className="bg-[#213A5C] text-white border-t border-[#DDD3C7] overflow-hidden">
 
-        {/* ACCREDITATION BANNER */}
+{/* ACCREDITATION BANNER */}
 <section className="
   py-12
   bg-[#213A5C]
   border-t border-white/10
   overflow-hidden
 ">
+
+  <style>{`
+    @keyframes scroll-track {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .accreditation-track {
+      display: flex;
+      width: max-content;
+      animation: scroll-track 30s linear infinite;
+    }
+    .accreditation-track:hover {
+      animation-play-state: paused;
+    }
+  `}</style>
 
   <p className="
     text-center
@@ -53,31 +68,18 @@ export function Footer() {
 
     {/* LEFT FADE */}
     <div
-      className="
-        absolute inset-y-0 left-0
-        w-24 z-10 pointer-events-none
-      "
-      style={{
-        background:
-          "linear-gradient(to right, #213A5C, transparent)",
-      }}
+      className="absolute inset-y-0 left-0 w-24 z-10 pointer-events-none"
+      style={{ background: "linear-gradient(to right, #213A5C, transparent)" }}
     />
 
     {/* RIGHT FADE */}
     <div
-      className="
-        absolute inset-y-0 right-0
-        w-24 z-10 pointer-events-none
-      "
-      style={{
-        background:
-          "linear-gradient(to left, #213A5C, transparent)",
-      }}
+      className="absolute inset-y-0 right-0 w-24 z-10 pointer-events-none"
+      style={{ background: "linear-gradient(to left, #213A5C, transparent)" }}
     />
 
     {/* TRACK */}
     <div className="accreditation-track">
-
       {[...track, ...track].map((badge, i) => (
         <div
           key={i}
@@ -96,7 +98,6 @@ export function Footer() {
             shadow-[0_10px_30px_rgba(0,0,0,0.04)]
           "
         >
-
           <img
             src={badge.src}
             alt={badge.alt}
@@ -108,18 +109,15 @@ export function Footer() {
               transition duration-300
             "
           />
-
           <p className="
             text-xs uppercase
             tracking-[0.2em]
             text-white/60
           ">
-          Industry Certified
+            Industry Certified
           </p>
-
         </div>
       ))}
-
     </div>
 
   </div>

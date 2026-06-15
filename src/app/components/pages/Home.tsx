@@ -23,7 +23,7 @@ export function Home() {
   const inspirationSlides = [
     {
       projectImage: "/projects/project1.jpg",
-      inspirationImage: "/inspirations/inspiration1.jpg",
+      inspirationImage: "/inspirations/whywearedifferent1.webp",
       title: "Toorak Residence",
       source: "Inspired by est living & The Local Project",
       description:
@@ -33,7 +33,7 @@ export function Home() {
 
     {
       projectImage: "/projects/project2.jpg",
-      inspirationImage: "/inspirations/inspiration2.jpg",
+      inspirationImage: "/inspirations/whywearedifferent2.webp",
       title: "Brighton Coastal Home",
       source: "Inspired by Australian coastal contemporary interiors",
       description:
@@ -43,7 +43,7 @@ export function Home() {
 
     {
       projectImage: "/projects/project3.jpg",
-      inspirationImage: "/inspirations/inspiration3.jpg",
+      inspirationImage: "/inspirations/whywearedifferent3.webp",
       title: "Modern Hawthorn Living",
       source: "Inspired by modern Melbourne architectural homes",
       description:
@@ -172,121 +172,98 @@ const companyDifference = [
   return (
     <div className="bg-[#F8F5F0] text-[#2B2B2B] overflow-hidden">
 
-      {/* HERO */}
-      <section className="pt-20 pb-24">
+{/* HERO */}
+<section className="relative min-h-[85vh] flex items-center overflow-hidden">
 
-        <div className="max-w-7xl mx-auto px-6">
+{/* IMAGE — 3/4 width, right side */}
+<div className="absolute inset-y-0 right-0 w-3/4">
+  <img
+    src="/images/main1.webp"
+    alt="Kitchen Renovation"
+    className="w-full h-full object-cover"
+  />
+  {/* fade on left edge so text blends in */}
+  <div
+    className="absolute inset-y-0 left-0 w-64"
+    style={{
+      background: "linear-gradient(to left, transparent, #F5F0EB)",
+    }}
+  />
+</div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+  {/* CONTENT — right side, overlaps image */}
+  <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full flex justify-start">
 
-            {/* LEFT CONTENT */}
-            <div>
+    <div className="w-full max-w-lg">
 
-              <p
-                className="
-                  text-xs
-                  uppercase
-                  tracking-[0.3em]
-                  text-[#74695E]
-                  mb-6
-                "
-              >
-                Kitchen Renovation Specialists
-              </p>
+      {/* EYEBROW */}
+      <div className="flex items-center gap-3 mb-8">
+        <span className="block w-8 h-px bg-[#213A5C]" />
+        <p className="text-xs uppercase tracking-[0.35em] text-[#213A5C] font-medium">
+          Kitchen Renovation Specialists
+        </p>
+      </div>
 
-              <h1
-                className="
-                  editorial-heading
-                  text-5xl
-                  md:text-7xl
-                  leading-[1.05]
-                  mb-8
-                "
-              >
-                Designing Kitchens
-                Around The
-                <span className="block text-[#5E564F]">
-                  Way You Live
-                </span>
-              </h1>
+      {/* HEADING */}
+      <h1 className="editorial-heading text-5xl md:text-6xl leading-[1.05] text-[#1A2B3C] mb-6">
+        Designing Kitchens
+        <br />
+        Around The
+        <br />
+        <span
+          style={{
+            WebkitTextStroke: "1.5px #523724",
+            WebkitTextFillColor: "transparent",
+            display: "block",
+          }}
+        >
+          Way You Live
+        </span>
+      </h1>
 
-              <p
-                className="
-                  text-[#5E564F]
-                  text-lg
-                  leading-relaxed
-                  max-w-xl
-                  mb-10
-                "
-              >
-                We believe every great home begins with a great kitchen.
-                That's why we combine innovative design, quality materials,
-                and construction expertise to create spaces that bring
-                families together and make everyday living better.
-              </p>
+      {/* DIVIDER */}
+      <div className="w-16 h-px bg-[#C4A882] mb-6" />
 
-              <div className="flex flex-wrap gap-4">
+      {/* BODY */}
+      <p className="text-[#5E564F] text-lg leading-relaxed mb-10">
+        We believe every great home begins with a great kitchen.
+        That's why we combine innovative design, quality materials,
+        and construction expertise to create spaces that bring
+        families together and make everyday living better.
+      </p>
 
-                <Link
-                  to="/contact"
-                  className="
-                    inline-flex items-center
-                    justify-center
-                    bg-[#213A5C]
-                    text-white
-                    px-8 py-4
-                    rounded-xl
-                    hover:opacity-90
-                    transition
-                  "
-                >
-                  Get A Cost Estimate
-                </Link>
+      {/* BUTTONS */}
+      <div className="flex flex-wrap gap-4">
+        <Link
+          to="/contact"
+          className="
+            inline-flex items-center justify-center
+            bg-[#213A5C] text-white font-semibold
+            px-8 py-4 rounded-xl
+            hover:opacity-90 transition
+          "
+        >
+          Get A Cost Estimate
+        </Link>
 
-                <Link
-                  to="/gallery"
-                  className="
-                    inline-flex items-center
-                    justify-center
-                    border border-[#213A5C]
-                    text-[#213A5C]
-                    px-8 py-4
-                    rounded-xl
-                    hover:bg-[#213A5C]
-                    hover:text-white
-                    transition
-                  "
-                >
-                  View Projects
-                </Link>
+        <Link
+          to="/gallery"
+          className="
+            inline-flex items-center justify-center
+            border border-[#213A5C] text-[#213A5C]
+            px-8 py-4 rounded-xl
+            hover:bg-[#213A5C] hover:text-white transition
+          "
+        >
+          View Projects
+        </Link>
+      </div>
 
-              </div>
+    </div>
 
-            </div>
+  </div>
 
-            {/* RIGHT IMAGE */}
-            <div>
-
-              <img
-                src="/images/inside_1.jpeg"
-                alt="Kitchen Renovation"
-                className="
-                  w-full
-                  h-[650px]
-                  object-cover
-                  rounded-[24px]
-                  border border-[#D8CEC2]
-                  shadow-[0_20px_60px_rgba(0,0,0,0.08)]
-                "
-              />
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
+</section>
 
       {/* WHY CHOOSE US */}
       <section
@@ -449,7 +426,7 @@ const companyDifference = [
           {/* FEATURE IMAGE */}
 
           <img
-            src="/images/journey4.webp"
+            src="/images/journey1.webp"
             alt="Journey"
             className="
               w-full
@@ -614,12 +591,12 @@ const companyDifference = [
                 <img
                   src={
                     index === 0
-                      ? "/images/inside_2.jpeg"
+                      ? "/images/inspirations/whywearedifferent1.webp"
                       : index === 1
-                      ? "/images/inside_3.jpeg"
+                      ? "/images/inspirations/whywearedifferent2.webp"
                       : index === 2
-                      ? "/images/inside_4.png"
-                      : "/images/inside_indust_1.jpg"
+                      ? "/images/inspirations/whywearedifferent3.webp"
+                      : "/images/inspirations/whywearedifferent4.webp"
                   }
                   alt={item.title}
                   className="
@@ -727,7 +704,7 @@ const companyDifference = [
             <div>
 
               <img
-                src="/images/inside_3.jpeg"
+                src="/images/inspirations/whywearedifferent3.webp"
                 alt="About Company"
                 className="
                   w-full
@@ -890,7 +867,7 @@ const companyDifference = [
             </div>
 
             <img
-              src="/images/project1.jpg"
+              src="/images/kitchen2.webp"
               alt="Project"
               className="
                 w-full
