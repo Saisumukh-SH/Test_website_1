@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 
-export function Journal() {
+export function Blog() {
 
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -98,7 +98,7 @@ export function Journal() {
           <div className="max-w-4xl">
 
             <p className="text-xs uppercase tracking-[0.3em] text-[#74695E] mb-5">
-              Journal
+              Blog & Inspiration
             </p>
 
             <h1 className="text-6xl md:text-7xl font-semibold leading-tight tracking-tight mb-8">
@@ -110,7 +110,7 @@ export function Journal() {
 
             <p className="text-[#5E564F] text-lg leading-relaxed max-w-2xl">
               Explore renovation inspiration, architectural thinking and
-              contemporary Australian interior design through our curated journal.
+              contemporary Australian interior design through our curated blog.
             </p>
 
           </div>

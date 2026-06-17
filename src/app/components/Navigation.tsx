@@ -12,7 +12,7 @@ export function Navigation() {
   const links = [
     { name: "About Us", path: "/about" },
     { name: "Our Services", path: "/services" },
-    { name: "Blog", path: "/journal" },
+    { name: "Blog", path: "/blog" },
     { name: "Contact Us", path: "/contact" },
   ];
 
@@ -333,7 +333,7 @@ export function Navigation() {
             </div>
 
             <Link
-              to="/journal"
+              to="/blog"
               onClick={() => setMobileMenuOpen(false)}
               className="
                 block text-lg
@@ -342,7 +342,7 @@ export function Navigation() {
                 transition
               "
             >
-              Journal
+              blog
             </Link>
 
             <Link

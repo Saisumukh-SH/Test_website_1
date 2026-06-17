@@ -5,10 +5,12 @@ import { Footer } from "./components/Footer";
 
 import { Home } from "./components/pages/Home";
 import { Gallery } from "./components/pages/Gallery";
-import { Journal } from "./components/pages/Journal";
+import { Blog, } from "./components/pages/Blog";
 import { Contact } from "./components/pages/Contact";
 import { ThankYou } from "./components/pages/ThankYou";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { About } from "./components/pages/AboutUs";
+import { Services } from "./components/pages/OurServices";
 
 export default function App() {
 
@@ -32,13 +34,23 @@ export default function App() {
           />
 
           <Route
-            path="/journal"
-            element={<Journal />}
+            path="/about"
+            element={<About  />}
+          />
+
+          <Route
+            path="/blog"
+            element={<Blog />}
           />
 
           <Route
             path="/contact"
             element={<Contact />}
+          />
+
+          <Route
+            path="/services"
+            element={<Services />}
           />
 
           <Route

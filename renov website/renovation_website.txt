@@ -78,7 +78,7 @@
                 <div class="hidden md:flex space-x-12">
                     <a href="#" class="nav-link active text-gray-300 hover:text-gold px-1 text-sm tracking-wider uppercase transition animated-underline" data-page="home">Home</a>
                     <a href="#" class="nav-link text-gray-300 hover:text-gold px-1 text-sm tracking-wider uppercase transition animated-underline" data-page="gallery">Portfolio</a>
-                    <a href="#" class="nav-link text-gray-300 hover:text-gold px-1 text-sm tracking-wider uppercase transition animated-underline" data-page="journal">Consultation</a>
+                    <a href="#" class="nav-link text-gray-300 hover:text-gold px-1 text-sm tracking-wider uppercase transition animated-underline" data-page="blog">Consultation</a>
                     <a href="#" class="nav-link text-gray-300 hover:text-gold px-1 text-sm tracking-wider uppercase transition animated-underline" data-page="contact">Contact</a>
                 </div>
                 <button class="md:hidden text-gold" id="mobile-menu-btn">
@@ -91,7 +91,7 @@
             <div class="hidden md:hidden pb-6" id="mobile-menu">
                 <a href="#" class="nav-link active block px-3 py-3 text-gray-300 hover:text-gold uppercase tracking-wider text-sm" data-page="home">Home</a>
                 <a href="#" class="nav-link block px-3 py-3 text-gray-300 hover:text-gold uppercase tracking-wider text-sm" data-page="gallery">Portfolio</a>
-                <a href="#" class="nav-link block px-3 py-3 text-gray-300 hover:text-gold uppercase tracking-wider text-sm" data-page="journal">Consultation</a>
+                <a href="#" class="nav-link block px-3 py-3 text-gray-300 hover:text-gold uppercase tracking-wider text-sm" data-page="blog">Consultation</a>
                 <a href="#" class="nav-link block px-3 py-3 text-gray-300 hover:text-gold uppercase tracking-wider text-sm" data-page="contact">Contact</a>
             </div>
         </div>
@@ -117,7 +117,7 @@
                     Where visionary design converges with impeccable craftsmanship to create timeless spaces of unparalleled sophistication.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <button class="bg-gold text-black px-10 py-4 text-sm tracking-widest uppercase font-medium hover:bg-yellow-600 transition-all duration-300" data-page="journal">Request Consultation</button>
+                    <button class="bg-gold text-black px-10 py-4 text-sm tracking-widest uppercase font-medium hover:bg-yellow-600 transition-all duration-300" data-page="blog">Request Consultation</button>
                     <button class="border-2 border-gold text-gold px-10 py-4 text-sm tracking-widest uppercase font-medium hover:bg-gold hover:text-black transition-all duration-300" data-page="gallery">View Portfolio</button>
                 </div>
             </div>
@@ -194,7 +194,7 @@
                 <div class="w-20 h-px bg-gold mx-auto mb-8"></div>
                 <h2 class="text-4xl md:text-6xl font-light serif mb-6">Begin Your Journey</h2>
                 <p class="text-xl text-gray-400 mb-12 font-light">Experience the pinnacle of bespoke renovation</p>
-                <button class="bg-gold text-black px-12 py-5 text-sm tracking-widest uppercase font-medium hover:bg-yellow-600 transition-all duration-300" data-page="journal">Schedule Private Consultation</button>
+                <button class="bg-gold text-black px-12 py-5 text-sm tracking-widest uppercase font-medium hover:bg-yellow-600 transition-all duration-300" data-page="blog">Schedule Private Consultation</button>
             </div>
         </section>
     </div>
@@ -251,14 +251,14 @@
                     </div>
                 </div>
                 <div class="text-center mt-16">
-                    <button class="border-2 border-gold text-gold px-12 py-4 text-sm tracking-widest uppercase font-medium hover:bg-gold hover:text-black transition-all duration-300" data-page="journal">Discuss Your Vision</button>
+                    <button class="border-2 border-gold text-gold px-12 py-4 text-sm tracking-widest uppercase font-medium hover:bg-gold hover:text-black transition-all duration-300" data-page="blog">Discuss Your Vision</button>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- journal Page -->
-    <div id="journal" class="page">
+    <!-- blog Page -->
+    <div id="blog" class="page">
         <section class="py-32 bg-black">
             <div class="max-w-3xl mx-auto px-6 lg:px-8">
                 <div class="text-center mb-16">
@@ -370,7 +370,7 @@
                         </div>
                         <div class="mt-12">
                             <p class="text-sm text-gray-500 mb-4 font-light">Private consultations by appointment only</p>
-                            <button class="border-2 border-gold text-gold px-10 py-4 text-sm tracking-widest uppercase font-medium hover:bg-gold hover:text-black transition-all duration-300" data-page="journal">Schedule Visit</button>
+                            <button class="border-2 border-gold text-gold px-10 py-4 text-sm tracking-widest uppercase font-medium hover:bg-gold hover:text-black transition-all duration-300" data-page="blog">Schedule Visit</button>
                         </div>
                     </div>
                     <div class="luxury-card p-10">

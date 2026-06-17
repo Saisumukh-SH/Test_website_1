@@ -172,98 +172,98 @@ const companyDifference = [
   return (
     <div className="bg-[#F8F5F0] text-[#2B2B2B] overflow-hidden">
 
-{/* HERO */}
-<section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      {/* HERO */}
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
 
-{/* IMAGE — 3/4 width, right side */}
-<div className="absolute inset-y-0 right-0 w-3/4">
-  <img
-    src="/images/main1.webp"
-    alt="Kitchen Renovation"
-    className="w-full h-full object-cover"
-  />
-  {/* fade on left edge so text blends in */}
-  <div
-    className="absolute inset-y-0 left-0 w-64"
-    style={{
-      background: "linear-gradient(to left, transparent, #F5F0EB)",
-    }}
-  />
-</div>
-
-  {/* CONTENT — right side, overlaps image */}
-  <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full flex justify-start">
-
-    <div className="w-full max-w-lg">
-
-      {/* EYEBROW */}
-      <div className="flex items-center gap-3 mb-8">
-        <span className="block w-8 h-px bg-[#213A5C]" />
-        <p className="text-xs uppercase tracking-[0.35em] text-[#213A5C] font-medium">
-          Kitchen Renovation Specialists
-        </p>
-      </div>
-
-      {/* HEADING */}
-      <h1 className="editorial-heading text-5xl md:text-6xl leading-[1.05] text-[#1A2B3C] mb-6">
-        Designing Kitchens
-        <br />
-        Around The
-        <br />
-        <span
+      {/* IMAGE — 3/4 width, right side */}
+      <div className="absolute inset-y-0 right-0 w-3/4">
+        <img
+          src="/images/main1.webp"
+          alt="Kitchen Renovation"
+          className="w-full h-full object-cover"
+        />
+        {/* fade on left edge so text blends in */}
+        <div
+          className="absolute inset-y-0 left-0 w-64"
           style={{
-            WebkitTextStroke: "1.5px #523724",
-            WebkitTextFillColor: "transparent",
-            display: "block",
+            background: "linear-gradient(to left, transparent, #F5F0EB)",
           }}
-        >
-          Way You Live
-        </span>
-      </h1>
-
-      {/* DIVIDER */}
-      <div className="w-16 h-px bg-[#C4A882] mb-6" />
-
-      {/* BODY */}
-      <p className="text-[#5E564F] text-lg leading-relaxed mb-10">
-        We believe every great home begins with a great kitchen.
-        That's why we combine innovative design, quality materials,
-        and construction expertise to create spaces that bring
-        families together and make everyday living better.
-      </p>
-
-      {/* BUTTONS */}
-      <div className="flex flex-wrap gap-4">
-        <Link
-          to="/contact"
-          className="
-            inline-flex items-center justify-center
-            bg-[#213A5C] text-white font-semibold
-            px-8 py-4 rounded-xl
-            hover:opacity-90 transition
-          "
-        >
-          Get A Cost Estimate
-        </Link>
-
-        <Link
-          to="/gallery"
-          className="
-            inline-flex items-center justify-center
-            border border-[#213A5C] text-[#213A5C]
-            px-8 py-4 rounded-xl
-            hover:bg-[#213A5C] hover:text-white transition
-          "
-        >
-          View Projects
-        </Link>
+        />
       </div>
 
-    </div>
+        {/* CONTENT — right side, overlaps image */}
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full flex justify-start">
 
-  </div>
+          <div className="w-full max-w-lg">
 
-</section>
+            {/* EYEBROW */}
+            <div className="flex items-center gap-3 mb-8">
+              <span className="block w-8 h-px bg-[#213A5C]" />
+              <p className="text-xs uppercase tracking-[0.35em] text-[#213A5C] font-medium">
+                Kitchen Renovation Specialists
+              </p>
+            </div>
+
+            {/* HEADING */}
+            <h1 className="editorial-heading text-5xl md:text-6xl leading-[1.05] text-[#1A2B3C] mb-6">
+              Designing Kitchens
+              <br />
+              Around The
+              <br />
+              <span
+                style={{
+                  WebkitTextStroke: "1.5px #523724",
+                  WebkitTextFillColor: "transparent",
+                  display: "block",
+                }}
+              >
+                Way You Live
+              </span>
+            </h1>
+
+            {/* DIVIDER */}
+            <div className="w-16 h-px bg-[#C4A882] mb-6" />
+
+            {/* BODY */}
+            <p className="text-[#5E564F] text-lg leading-relaxed mb-10">
+              We believe every great home begins with a great kitchen.
+              That's why we combine innovative design, quality materials,
+              and construction expertise to create spaces that bring
+              families together and make everyday living better.
+            </p>
+
+            {/* BUTTONS */}
+            <div className="flex flex-wrap gap-4">
+              <Link
+                to="/contact"
+                className="
+                  inline-flex items-center justify-center
+                  bg-[#213A5C] text-white font-semibold
+                  px-8 py-4 rounded-xl
+                  hover:opacity-90 transition
+                "
+              >
+                Get A Cost Estimate
+              </Link>
+
+              <Link
+                to="/gallery"
+                className="
+                  inline-flex items-center justify-center
+                  border border-[#213A5C] text-[#213A5C]
+                  px-8 py-4 rounded-xl
+                  hover:bg-[#213A5C] hover:text-white transition
+                "
+              >
+                View Projects
+              </Link>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
 
       {/* WHY CHOOSE US */}
       <section
@@ -319,7 +319,7 @@ const companyDifference = [
                 transition
               "
             >
-              Get A Cost Estimate
+              Make an Appointment
             </Link>
 
           </div>
@@ -423,19 +423,6 @@ const companyDifference = [
 
           </div>
 
-          {/* FEATURE IMAGE */}
-
-          <img
-            src="/images/journey1.webp"
-            alt="Journey"
-            className="
-              w-full
-              h-full
-              object-cover
-              rounded-[24px]
-              mb-16
-            "
-          />
 
       {/* PROCESS GRID */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

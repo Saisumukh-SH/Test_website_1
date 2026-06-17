@@ -206,7 +206,7 @@ export function Footer() {
             </Link>
 
             <Link
-              to="/journal"
+              to="/blog"
               className="block hover:text-white/70 transition"
             >
               Inspiration

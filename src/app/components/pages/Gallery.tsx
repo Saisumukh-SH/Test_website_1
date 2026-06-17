@@ -13,7 +13,7 @@ export function Gallery() {
     "All",
     "Kitchen",
     "Bathroom",
-    "Living",
+    "Extensions",
     "Full Renovation",
   ];
 
@@ -30,8 +30,8 @@ export function Gallery() {
         ? "Kitchen"
         : category === "bathroom"
           ? "Bathroom"
-          : category === "living"
-            ? "Living"
+          : category === "extensions"
+            ? "Extensions"
             : category === "full-renovation"
               ? "Full Renovation"
               : "All";
@@ -177,7 +177,7 @@ export function Gallery() {
     {
       id: 3,
       title: "Hawthorn Interior",
-      category: "Living",
+      category: "Extensions",
       location: "Hawthorn, Victoria",
       image: "/images/project3.webp",
 
@@ -378,7 +378,7 @@ export function Gallery() {
     {
       id: 6,
       title: "Architectural Living Space",
-      category: "Living",
+      category: "Extensions",
       location: "Camberwell, Victoria",
       image: "/images/project6.webp",
 
@@ -553,7 +553,7 @@ export function Gallery() {
             {/* RIGHT IMAGE */}
             <div>
               <img
-                src="/images/inside_1.jpeg"
+                src="/images/main4.webp"
                 alt="Kitchen Renovation"
                 className="
                   w-full
